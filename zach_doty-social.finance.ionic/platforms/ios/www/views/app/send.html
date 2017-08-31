@@ -1,0 +1,39 @@
+<ion-view view-title="Send">
+    <ion-content>
+        <div class="padding app-bg-blue app-color-white top-box">
+            <div>
+	            <div class="item item-divider">
+	                <span ng-bind="cardToUse.label"></span> <span style="float:right;font-size:12px;text-decoration:underline;"><a ng-click="showCards()">Select Card to Send From</a></span>
+	            </div>
+	            <div class="item item-text-wrap" style="text-align:center;">
+	                <h1 style="font-size: 2em;"><span ng-bind-html="cardToUse.formatted_balance"></span></h1>
+	            </div>
+            </div>
+        </div>
+        <div class="list">
+            <div style="margin:20px;" ng-if="btnSend.errors.length > 0" ng-class="{'error_bg':btnSend.error==true,'success_bg':btnSend.error==false}" >
+                <div ng-repeat="error in btnSend.errors" ng-class="{'error-text':btnSend.error==true,'success-text':btnSend.error==false}" ng-bind="error"></div>
+            </div>
+            <label class="item item-input item-floating-label">
+                <span class="input-label text_blue">Amount</span>
+                <span class="input-label amount-field" ng-bind-html="cardToUse.symbol"></span>
+                <input ng-model="transactionDetails.amount" style="width:90%;margin-top:8px;" type="text" placeholder="Amount">
+            </label>
+
+            <div class="row" >
+                <label class="item item-input item-floating-label item-icon-right col col-80">
+                    <span class="input-label text_blue">Email or bitcoin address to send money to</span>
+                    <input type="text" placeholder="Email or bitcoin address to send money to" ng-model="transactionDetails.address">
+                </label>
+                <i class="send icon ion-qr-scanner col col-20" ng-click="doqrcode();" style="font-size: 25px !important ;padding-top: 20px !important ;" ></i>
+            </div>
+            
+            <label class="item item-input item-floating-label">
+                <span class="input-label text_blue">Transaction description</span>
+                <input type="text" placeholder="Transaction description" ng-model="transactionDetails.description">
+            </label>
+            <button class="button button-block button-positive" ng-click="doSend()" ng-bind="btnSend.caption" ng-disabled="btnSend.proccess">
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

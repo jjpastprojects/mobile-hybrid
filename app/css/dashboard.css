@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#dashboard {
+    padding:15px;
+}
+
+#dashboard #classroom_list {
+   
+    height:500px;
+
+}
+
+#dashboard #classroom_list .classroom_list_item{
+	cursor:pointer;
+	margin:auto;
+    height:240px;
+    text-align:center;
+    font-size:18px;
+    
+}
+
+#dashboard #classroom_list .classroom_list_item img {
+    height:340px;   
+}
+

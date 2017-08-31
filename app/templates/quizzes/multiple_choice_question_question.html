@@ -1,0 +1,25 @@
+<div id="quiz_multiple_choice_question_options" class="chalk_board">
+	<div class="chalk_board_inner">
+        <div id="quiz_multiple_choice_question_options_container">
+            {{#answers}}
+                <div class="quiz_multiple_choice_option {{oddeven}}" id="quiz_multiple_choice_option_{{index}}" data-answer-index="{{index}}">
+                    {{#image}}
+                        <img class="quiz_image" src="{{image}}" alt="mc_choice_option" />
+                    {{/image}}
+                    {{^image}}
+                        <div class="answer_value">
+                            {{value}}
+                        </div>
+                    {{/image}}
+                </div>
+            {{/answers}}   	
+        </div>
+        <div class="clear"></div>
+        
+	</div>
+    <div class="clear"></div>
+    <div id="quiz_multiple_choice_question_question_answer_container" class="answer_container quiz_answer ">
+        {{question}}
+    </div>
+</div>
+

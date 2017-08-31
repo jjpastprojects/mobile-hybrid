@@ -1,0 +1,59 @@
+<ion-view view-title="Social" class="social-view">
+    <ion-content class="has-header">
+        <div class="transaction-tabs tabs">
+            <a class="tab-item" ng-class="{'active':activeTab=='tab1'}" ng-click="changeTab('tab1')">MOTHERS AT RISK</a>
+            <a class="tab-item" ng-class="{'active':activeTab=='tab2'}" ng-click="changeTab('tab2')">SOCIAL ENTREPRENEURS</a>
+        </div>
+		
+		<div ng-show="activeTab=='tab1'">
+
+
+	        <div class="list clear">
+
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom1.jpg">
+			      <h2>Sonia Bemeriki</h2>
+			      <p>Rwanda</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom2.jpg">
+			      <h2>Olive Ngeze</h2>
+			      <p>Rwanda</p>
+			    </a>
+
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom3.jpg">
+			      <h2>Phuong An</h2>
+			      <p>Vietnam</p>
+			    </a>
+
+			</div>
+        </div>
+
+        <div ng-show="activeTab=='tab2'">
+	        
+
+	        <div class="list clear">
+
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom1.jpg">
+			      <h2>Sonia Bemeriki</h2>
+			      <p>Rwanda</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom2.jpg">
+			      <h2>Olive Ngeze</h2>
+			      <p>Rwanda</p>
+			    </a>
+
+			    <a class="item item-avatar" href="#">
+			      <img src="img/mom3.jpg">
+			      <h2>Louis Litt</h2>
+			      <p>South Africa</p>
+			    </a>
+
+			</div>
+        </div>
+
+    </ion-content>
+</ion-view>

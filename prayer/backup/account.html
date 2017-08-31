@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="cordova.js"></script>
+       <script src="js/kickback.js"></script>
+
+
+                          </head>
+  <body>
+    <div data-role="page"  id="myaccount">
+      <div data-role="panel" id="sidebar" data-position="right">
+        <h2 style="margin-left: 10px;">Menu</h2>
+       
+      </div>
+
+      <div data-role="header" class="header">
+       <a class="ui-btn-left ui-link" id="accountback1" data-role="none" data-transition="pop"></a> <h1 aria-level="1" role="heading" class="header-title ui-title" style="color:#FFFFFF; margin-left: 0px; width: 100%;">Account</h1>
+      
+      </div>
+      <div data-role="header" class="bottom-header">
+        <ul class="list-inline">
+          <li><a style="float:right; font-size:16px; margin-left:5px; color:#fff; margin-top:-10px;"  class="ui-link" href="#" data-role="none" data-transition="slide">Edit Account</a></li>
+          <!--<li><a style="float:right; font-size:16px; margin-left:5px; color:#fff; margin-top:-10px;" class="ui-link" href="#" data-role="none" data-transition="slide">Account</a></li>-->
+          <li style="float:right; font-size:16px;  color:#fff;"><a style="float:right; font-size:16px; margin-right:5px; color:#fff; margin-top:-10px;" class="ui-btn-right ui-link"  href="" id="nextbutton12"  data-role="none" >Save</a></li>
+        </ul>
+      </div>
+      <div data-role="main" class="ui-content main-content">
+        <div class="profile-pic text-center">
+         <span>
+            <img id="largeImage" src="images/profile-pic.png"></img>
+            <a id="photopick" onClick="getPhoto();" ><i class="fa fa-plus-circle"></i></a>
+        </span>
+        </div>
+        <div class="edit-list">
+          <ul class="list-unstyled">
+            <li>
+              <div class="col-xs-3" style="padding-top: 6px;">
+                <span style="font-size: 14px;">Name</span>
+              </div>
+              <div  class="col-xs-7">
+                <input type="text" name="fnameee" id="fnameee" placeholder="">
+              </div>
+              <div class="col-xs-2 text-right" style="padding-top: 3px;">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+
+
+            <li>
+              <div class="col-xs-3" style="padding-top: 0px;">
+                <span style="font-size: 14px;">Password</span>
+              </div>
+              <div class="col-xs-7" style="padding-top: 3px;">
+                <h2>******</h2>
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="change_password.html" data-transition="slide"  class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+            
+            <div id="showhide">
+            <li>
+                <div class="col-xs-3">
+                    <i class="fa fa-envelope-o"></i>
+                </div>
+                <div  class="col-xs-7">
+                    <input type="text" name="email" id="email" placeholder="">
+                        </div>
+                <div class="col-xs-2 text-right">
+                    <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+                </div>
+            </li>
+            
+            
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <h2>Update PayPal</h2>
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <h2>Push Notification</h2>
+              </div>
+              <div class="col-xs-2 text-right">
+               
+                <select name="flip-min" id="flip-min" data-mini="true" data-role="slider">
+                    <option value="off">Switch Off</option>
+                    <option value="on">Switch On</option>
+                </select>
+              </div>
+            </li>
+</div>
+            <li>
+              <div class="col-xs-3" style="padding-top: 6px;">
+                <span style="font-size: 14px;">D.O.B</span>
+              </div>
+              <div  class="col-xs-7">
+                <input type="text"  onfocus="(this.type='date')" name="dob" id="dob" placeholder="Date of birth">
+              </div>
+              <div class="col-xs-2 text-right" style="padding-top: 4px;">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <!--<li>
+              <div class="col-xs-3" style="padding-top: 1px;">
+                <span style="font-size: 14px;">Gender</span>
+              </div>
+              <div  class="col-xs-7">
+               
+                     <select name="gender" id="gender">
+                         <option value="male">Male</option>
+                         <option value="female">Female</option>
+                     </select>
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></i></a>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
+    

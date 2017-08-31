@@ -1,0 +1,24 @@
+<div id="quiz_drag_and_drop_image" class="chalk_board">
+	<div class="chalk_board_inner">
+    	<div class="quiz_single_image">
+			<img class="quiz_image" src="{{image}}" alt="fib_choice_option" />
+        </div>
+        <div class="comic_sans_font quiz_answer display_none" id="correct_answer">
+        
+        </div>
+	</div>
+    <div id="quiz_drag_and_drop_entry" class="answer_container " tabindex="1">
+     
+        <ul id="drag_and_drop_answer_container" class="quiz_answer {{is_sentence}}">
+        <li class="drag_and_drop_item_filler" >&nbsp;</li>
+        {{#shuffledAnswerArray}}
+            <li class="drag_and_drop_item {{is_sentence}}" data-value="{{.}}">{{.}}</li>
+        {{/shuffledAnswerArray}}
+        </ul>
+         
+         <img id="drag_and_drop_answer_submit"  class="answer_button hover_image" data-inactive-state = "images/classroom/Button_question_inactive.png" data-active-state="images/classroom/Button_question_active.png" src="images/classroom/Button_question_inactive.png" alt="answer image" />
+        <div class="clear"></div>
+       
+    </div>
+</div>
+

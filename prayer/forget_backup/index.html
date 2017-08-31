@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/bootstrap.css">
+                <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+                    <link rel="stylesheet" href="css/font-awesome.min.css">
+                        <link rel="stylesheet" href="css/custom.css">
+                            <script src="js/jquery-1.11.3.min.js"></script>
+                            <script src="js/jquery.mobile-1.4.5.min.js"></script>
+                            <script src="cordova.js"></script>
+                            <script src="js/fastclick.js"></script>
+                             <script src="js/myaccount.js"></script>
+                            <script src="js/kickback.js"></script>
+                            <script type="application/javascript">
+                           
+                                window.addEventListener('load', function () {
+                                                        FastClick.attach(document.body);
+                                                        }, false);
+                                </script>
+                            
+                            
+                            </head>
+    <body>
+        <div data-role="page"  id="login">
+            <div data-role="main" class="ui-content login-content">
+                <div class="login-pic text-center">
+                    <span>
+                        <img src="images/logo.png">
+                            </span>
+                </div>
+                <div class="login-form text-center">
+                    <h1>WELCOME</h1>
+                    
+                    <div class="ui-field-contain">
+                        <input type="email" name="email" id="name-a" placeholder="Email / Mobile">
+                            <input type="password" name="password" id="password-a" placeholder="Password">
+                                </div>
+                    <input type="button"   data-icon="check" id="loginbutton"   data-inline="true" value="">
+                        
+                        </div>
+                <div class="create-acc text-center">
+                    <a  href="register.html" data-transition="pop" >Create Account</a>
+                </div>
+                <div class="copy-rgt text-center">
+                    2015 Copyright &copy; KickBack
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

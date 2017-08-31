@@ -1,0 +1,36 @@
+.wallet-view,.social-view
+{
+	.slide-container{
+		height:100% !important;
+		padding-top: 25%;
+	}
+	.slide-amount,.slide-currency{
+		color: white;
+		font-size: 35px;
+	}
+	.slide-amount{
+		margin-right: 10px;
+	}
+	.slide-currency{
+		margin-left: 10px;
+	}
+	.primary_text,.item > .ion-chevron-right{
+		font-size: 16px;
+		color: $app-bg !important;
+	}
+	.secondary_text, .dir-icon{
+		color: $sideline_color !important;
+	}
+	.transaction-tabs{
+		background-color: #fff;
+	    border-bottom: 1px solid #6760f6;
+	    position: relative;
+	}
+	.transaction-tabs .tab-item.active{
+		color: #000;
+	    border-bottom: solid 2px #6760f6 !important;
+	}
+	.transaction-tabs-content .list .item:first-child{
+		border-top: none;
+	}
+}

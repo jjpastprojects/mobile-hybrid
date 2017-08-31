@@ -1,0 +1,127 @@
+@import 'vars';
+@import 'typography';
+html {
+  position: relative;
+  min-height: 100%;
+}
+.red-color {
+  color: red !important;
+}
+
+body {
+  font-family: BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+  color: $font-color--dark;
+  background-color: $background--light;
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.footer > .container {
+
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+.margin-negative {
+  margin-top: 20px;
+}
+
+.wordo-tab {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  //z-index: 10;
+  //   -webkit-box-shadow: 1px 3px 8px #bbb; 
+  // -moz-box-shadow: 1px 3px 8px #bbb;
+  //  box-shadow: 1px 3px 8px #bbb; 
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  //  -moz-border-radius: 2px;
+  // -webkit-border-radius: 2px;
+  // -khtml-border-radius: 2px;
+  // border-radius: 2px;
+  //margin-bottom: 2px;
+  //border-bottom: 2px solid transparent;
+  //border-top-left-radius: 3px;
+  //border-top-right-radius: 3px;
+}
+
+.red,
+.red a {
+  color: #ff0000;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fa-spin-custom,
+.glyphicon-spin {
+  -webkit-animation: spin 1000ms infinite linear;
+  animation: spin 1000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.pos-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+
+a.wordo-like,
+a.wordo-like:hover {
+  text-decoration: none;
+}
+
+.part-of-speech-key {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d4d4d4;
+  margin-bottom: -10px;
+  margin-top: 25px;
+}
+
+.part-of-speech-desc {
+  color: #666;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.part-of-speech-panel {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}

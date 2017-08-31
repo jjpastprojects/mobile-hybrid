@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+body {
+	
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    background:#141414;
+    margin:0;
+    padding:0;
+    width:960px !important;
+    height:640px !important;
+	margin:0px auto 0;
+   
+}
+
+
+
+.clear {
+	clear:both;
+}
+
+
+
+.display_none {
+	display:none;
+}
+
+.display_inline {
+	display:inline-block;
+}
+
+.float_left {
+	float:left;
+}
+
+.float_right {
+	float:right;
+}
+
+.rounded_corners_15 {
+	border:1px solid #000;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+.button {
+	cursor:pointer;
+}
+
+.form_error {
+	border: 1px solid red;
+}
+
+
+.external_url {
+    color:#fff;    
+}

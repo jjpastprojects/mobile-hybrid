@@ -1,0 +1,13 @@
+/* CSS Document */
+
+* {
+    -webkit-backface-visibility:hidden;
+}
+
+body {
+    margin-top:0 !important;    
+}
+
+#bottom {
+    background-color:#141414;    
+}

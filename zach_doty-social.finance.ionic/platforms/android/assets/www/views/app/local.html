@@ -1,0 +1,27 @@
+<ion-view view-title="Local">
+    <ion-content>
+        <div class="padding app-bg-blue app-color-white top-box">
+            <div>
+                <h4 class="app-color-white">Location</h3>
+                <h2 class="app-color-white">Kigali, Rwanda</h3>
+            </div>
+        </div>
+
+        <div class="padding">
+        	<h5 class="text_blue">Select category</h5>
+        </div>
+        	
+        <div class="list" style="margin-bottom:-1px;" ng-repeat="faq in faqs" >
+  		  	
+			<div class="item item-icon-right text_blue" ng-click="toggleGroup(faq)" ng-class="{active: isGroupShown(faq)}">
+			    {{faq.ques}}
+			    <i class="icon" style="font-size:16px;" ng-class="isGroupShown(faq) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+			</div>
+
+			<div class="item text_blue" ng-show="isGroupShown(faq)">
+			    {{faq.ans}}
+			</div>
+
+		</div>
+    </ion-content>
+</ion-view>

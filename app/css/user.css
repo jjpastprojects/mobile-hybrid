@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#user {
+
+}
+
+
+
+#user #update_form #first_column {
+	float:left;
+	width:150px;
+	text-align:center;
+}
+
+
+#user #update_form #second_column {
+	float:left;
+	width:600px;
+}
+
+#user #update_form #second_column input {
+	width:480px;
+}
+
+#user #update_form #third_column  {
+	width:200px
+}

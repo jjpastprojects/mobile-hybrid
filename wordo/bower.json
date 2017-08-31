@@ -1,0 +1,24 @@
+{
+  "name": "Wordo",
+  "description": "Wordo Application",
+  "main": "",
+  "authors": [
+    "Debabrata Tripathy <dtripathy10@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "normalize-strings": "normalize#~1.0.4",
+    "normalize-css": "normalize.css#~3.0.3",
+    "components-font-awesome": "~4.5.0"
+  }
+}

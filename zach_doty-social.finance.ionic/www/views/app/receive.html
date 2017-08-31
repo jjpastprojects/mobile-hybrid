@@ -1,0 +1,32 @@
+<ion-view view-title="Receive">
+    <ion-content>
+		<div class="bar blue-bg bar-header bar-light">
+		  <h1 class="title app-color-white">Deposit with bitcoin</h1>
+		</div>
+    	<div class="padding" style="padding-top: 60px;">
+	        <div class="list">
+	            <label class="item item-input item-select">
+	                <div class="input-label">
+	                    <span class="text_blue">Card to deposit</span>
+	                </div>
+	                <select ng-model="depositAddress">
+	                    <option value="">Select card</option>
+	                    <option value="{{card.address}}" ng-repeat="card in fromCards" ng-bind-html="card.formatted_balance"></option>
+	                </select>
+	            </label>
+	        </div>
+
+	        <div class="card" ng-if="depositAddress!=''">
+	            <div class="item item-text-wrap align-center">
+	                <img ng-src="https://blockchain.info/qr?data={{depositAddress}}&size=250">
+	            </div>
+	            <div class="item item-divider align-center">
+	                <span ng-bind="depositAddress"></span>
+	            </div>
+	        </div>
+
+	        <button class="button button-block button-positive" ng-disabled="depositAddress==''">Deposit with Paypal</button>
+        </div>
+
+    </ion-content>
+</ion-view>

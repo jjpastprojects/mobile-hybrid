@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#video_board_container {
+	position:relative;
+    -webkit-backface-visibility:hidden;
+	
+}
+
+#video_board_container #video_container {
+	position:absolute;
+	top:0;
+	left:0;
+    -webkit-backface-visibility:hidden;
+}
+
+#video_board_container #video_player_controls_container {
+	position:absolute;
+	top:540px;
+	left:0;
+	width:960px;
+    height:100px;
+}
+
+#video_board_container #video_board {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1000;
+	background:url(../images/video_board/960-540-movie-overlay.png);
+	width:960px;
+	height:540px;
+    -webkit-backface-visibility:hidden;
+
+}
+
+#video_board #video_board_inner {
+	-webkit-backface-visibility:hidden;
+	height:540px;
+}
+
+#video_board #video_middle_column {
+	height:540px;
+}
+
+#video_board #video_right_column {
+	text-align:center;
+	width:214px;
+	height:540px;
+}
+
+
+.right_column_inner {
+	padding:15px 20px 15px 20px;
+}
+
+#video_board #video_right_column_header {
+	width:173px;
+	height:32px;
+	
+}
+
+#video_board #video_right_column_header #units_text {
+	width:109px;
+	float:left;
+}
+
+.right_column_bottom {
+	position:absolute;
+	bottom:0px;
+	width:171px;
+	padding-left:7px;
+	
+}
+
+
+#video_board #video_right_column_footer {
+	width:171px;
+	height:27px;
+	background:url(../images/video_board/menu-bottom_lines.png);
+	display:inline-block;
+}
+
+
+#video_board #course_logo {
+	width:230px;
+	float:left;
+	margin:2px;
+    	height:90px;
+
+	
+}
+
+#video_board #course_logo  img {
+border:solid 3px #000;
+	padding:3px;
+    height:100%;
+}
+
+#video_board #progress_performance_container {
+	width:300px;
+	float:left;
+	padding-top:20px;
+	text-align:left;
+	height:90px;
+	
+}
+
+#video_board #progress_performance_container_inner {
+	position:relative;
+	height:60px;
+}
+
+
+#video_board #progress_performance_container_inner .unit_row {
+	position:absolute;
+}
+#video_board #progress_performance_container_inner .unit_row#unit_row_1 {
+	bottom:0px;
+}
+
+#video_board #progress_performance_container_inner .unit_row#unit_row_2 {
+	bottom:10px;
+}
+#video_board #progress_performance_container_inner .unit_row#unit_row_3 {
+	bottom:20px;
+}
+#video_board #progress_performance_container_inner .unit_row#unit_row_4 {
+	bottom:30px;
+}
+#video_board #progress_performance_container_inner .unit_row#unit_row_5 {
+	bottom:40px;
+}
+#video_board #progress_performance_container_inner .unit_row#unit_row_6 {
+	bottom:50px;
+}
+
+#video_board #progress_performance_container_inner .unit_row#unit_row_7 {
+	bottom:60px;
+}
+
+
+#video_board #video_board_best_grades_container {
+	float:left;
+	width:204px;
+	text-align:left;
+	padding-top:20px;
+	
+	
+}
+
+#video_board #video_board_best_grades_container_inner {
+	position:relative;
+	height:50px;
+}
+
+
+
+#video_board #progress_performance_container .progress_performance_unit {
+	float:left;
+	margin-right:10px;
+}
+
+#video_board #progress_performance_container .progress_performance_lesson_box {
+	width:16px;
+	height:7px;
+	float:left;	
+}
+#video_board #progress_performance_container .progress_performance_lesson_box.in_progress {
+
+	background:url(../images/video_board/CourseProgress_Tile_yellow.png);	
+}
+
+#video_board #progress_performance_container .progress_performance_lesson_box.not_started {
+
+	background:url(../images/video_board/CourseProgress_Tile_grey.png);	
+}
+
+#video_board #progress_performance_container .progress_performance_lesson_box.completed {
+
+	background:url(../images/video_board/CourseProgress_Tile_green.png);	
+}
+
+
+#video_board #description_container {
+	padding:15px;
+	color:#fff;
+	background: url(../images/video_board/lesson_description_overlay.png);
+	width:700px;
+	height:114px;
+}
+
+#video_board #description_container #description_title {
+	width:300px;
+	float:left;
+	font-size:24px;
+}
+
+#video_board #description_container #description_text {
+	width:400px;
+	float:left;
+}
+
+#video_board #description_container #lesson_play_button {
+	cursor:pointer;
+	width:66px;
+	height:58px;
+}
+
+#video_board #unit_container {
+	padding-top:15px;
+	text-align:center;
+	color:#fff;
+	font-size:28px;
+}
+
+#video_board .unit_box {
+	float:left;
+	width:57px;
+	height:57px;
+	background:url(../images/video_board/units-grey.png);
+	font-size:36px;
+	text-align:center;
+	line-height:57px;
+	color:#fff;
+	margin-right:1px;
+	margin-bottom:1px;
+	cursor:pointer;
+	
+}
+
+#video_board .unit_box.active {
+	background:url(../images/video_board/units-green.png);
+}
+
+#video_board .unit_box.selected {
+	background:url(../images/video_board/units-green.png);
+}
+
+#video_board #lesson_list_container {
+	padding:10px;
+}
+
+#video_board .lesson_box {
+	width:220px;
+	height:124px;
+	position:relative;
+	cursor:pointer;
+	float:left;
+	margin:0 15px 25px 0;
+}
+
+#video_board .lesson_box .lesson_box_frame {
+	width:220px;
+	height:124px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:url(../images/video_board/Nav_template.png);
+	
+}
+
+#video_board .lesson_box.active .lesson_box_frame {
+	background:url(../images/video_board/Nav_template-active.png);
+}
+
+#video_board .lesson_box .lesson_title {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:140px;
+	height:40px;
+	text-align:right;
+	color:#fff;
+	z-index:500;
+	line-height:40px;
+	font-size:24px;	
+}
+
+#video_board .lesson_box .lesson_play_button {
+	position:absolute;
+	bottom:0;
+	right:10px;
+	width:40px;
+	height:40px;
+	z-index:500;
+
+}
+#video_board .lesson_box .lesson_play_button img {
+    width:100%;    
+}
+
+

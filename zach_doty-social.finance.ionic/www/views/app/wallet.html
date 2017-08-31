@@ -1,0 +1,115 @@
+<ion-view view-title="Wallet" class="wallet-view">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <img id="image-slide-1" src="img/btc.png" style="width:100%; position:absolute; z-index:-1;" />
+        <ion-slide-box show-pager="true" style="height:auto !important;">
+            <ion-slide ng-style="setBackDimensions()" on-slide-changed="cardChanged($index)" ng-repeat="sliderimage in sliderImages">
+                <div class="slide-container">
+                    <div class="slide-currency left" style="padding-top: 22%;">
+                      <span ng-bind-html="sliderimage.symbol"></span>
+                      <span ng-bind-html="sliderimage.balance"></span>
+                    </div>
+                    <div class="slide-amount right" ng-bind="sliderimage.label"></div>
+                    <div class="clear"></div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="transaction-tabs tabs" >
+            <a class="tab-item" ng-class="{'active':activeTransactionTab=='all'}" ng-click="changeTransactionTab('all')">ALL</a>
+            <a class="tab-item" ng-class="{'active':activeTransactionTab=='sent'}" ng-click="changeTransactionTab('sent')">SENT</a>
+            <a class="tab-item" ng-class="{'active':activeTransactionTab=='receive'}" ng-click="changeTransactionTab('receive')">RECEIVED</a>
+        </div>
+        <div class="transaction-tabs-content">
+            <div class="list" ng-show="activeTransactionTab=='all'">
+                <a ng-repeat="transaction in transactions" ng-click="showDetails(transaction)" class="item item-icon-left item-icon-right">
+                    <i ng-if="!transaction.converted" class="dir-icon icon " ng-class="{'ion-arrow-graph-up-right':transaction.type=='withdrawal_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && transaction.sent),'ion-arrow-graph-down-left':transaction.type=='deposit_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && !transaction.sent)}"></i>
+
+                    <i ng-if="transaction.converted" class="dir-icon icon ion-ios-loop-strong"></i>
+
+                    <h2 class="primary_text" ng-if="!transaction.converted && (transaction.type=='to_card' || transaction.type=='to_email')">
+                      <span ng-if="transaction.sent">Sent to</span>
+                      <span ng-if="!transaction.sent">Recieved from</span> 
+                      <span ng-if="transaction.type=='to_card' && transaction.sent"> card </span>
+                      <span ng-if="transaction.type=='to_email' && transaction.sent"> email </span>
+                      <span ng-if="transaction.sent" ng-bind="transaction.destination.to"></span>
+                      <span ng-if="!transaction.sent"> 
+                        <span ng-bind="transaction.origin.from"></span>
+                        <span ng-bind="transaction.origin.from"></span>
+                      </span>
+                    </h2>
+                    <h2 class="primary_text" ng-show="!transaction.converted && transaction.type=='deposit_bitcoin'">
+                      <span >Deposit bitcoin to </span> card <span ng-bind="transaction.destination.to"></span>
+                    </h2>
+                    <h2 class="primary_text" ng-show="!transaction.converted && transaction.type=='withdrawal_bitcoin'">
+                      <span>Withdraw bitcoin from </span> card <span ng-bind="transaction.destination.to"></span>
+                    </h2>
+                    <h2 class="primary_text" ng-show="transaction.converted">
+                        <span>Converted</span> 
+                        <span ng-bind-html="transaction.origin.symbol | unsafe"></span>
+                        <span ng-bind="transaction.origin.amount"></span> to <span ng-bind-html="transaction.destination.symbol | unsafe"></span>
+                        <span ng-bind="transaction.destination.amount"></span>
+                    </h2>
+                    <p class="secondary_text" ng-if="!transaction.converted && transaction.sent" class="">
+                      <span ng-bind-html="transaction.origin.symbol | unsafe"></span> 
+                      <span ng-bind="transaction.origin.amount"></span>
+                    </p>
+                    <p class="secondary_text" ng-if="!transaction.converted && !transaction.sent" class="">
+                      <span ng-bind-html="transaction.destination.symbol | unsafe"></span> 
+                      <span ng-bind="transaction.destination.amount"></span>
+                    </p>
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+            </div>
+            <div class="list" ng-show="activeTransactionTab=='sent'">
+                <a ng-repeat="transaction in transactions | filter:filterAllSent" ng-click="showDetails(transaction)" class="item item-icon-left item-icon-right">
+                    <i class="dir-icon icon " ng-class="{'ion-arrow-graph-up-right':transaction.type=='withdrawal_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && transaction.sent),'ion-arrow-graph-down-left':transaction.type=='deposit_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && !transaction.sent)}"></i>
+                    <h2 class="primary_text" ng-if="transaction.type=='to_card' || transaction.type=='to_email'">
+                                      <span ng-if="transaction.sent">Sent to</span>
+                                      <span ng-if="!transaction.sent">Recieved from</span> 
+                                      <span ng-if="transaction.type=='to_card'"> card </span>
+                                      <span ng-if="transaction.type=='to_email'"> email </span>
+                                      <span ng-bind="transaction.destination.to"></span>
+                                    </h2>
+                    <h2 class="primary_text" ng-show="transaction.type=='deposit_bitcoin'">
+                                    <span >Deposit bitcoin to </span> card </span><span ng-bind="transaction.destination.to"></span>
+                                    </h2>
+                    <h2 class="primary_text" ng-show="transaction.type=='withdrawal_bitcoin'">
+                                    <span>Withdraw bitcoin from </span> card </span><span ng-bind="transaction.destination.to"></span>
+                                    </h2>
+                    <p class="secondary_text" ng-if="transaction.sent" class=""> <span ng-bind-html="transaction.origin.symbol | unsafe"></span> <span ng-bind="transaction.origin.amount"></span></p>
+                    <p class="secondary_text" ng-if="!transaction.sent" class=""><span ng-bind-html="transaction.destination.symbol | unsafe"></span> <span ng-bind="transaction.destination.amount"></span></p>
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+            </div>
+            <div class="list" ng-show="activeTransactionTab=='receive'">
+                <a ng-repeat="transaction in transactions | filter:filterAllReceive" ng-click="showDetails(transaction)" class="item item-icon-left item-icon-right">
+                    <i class="dir-icon icon " ng-class="{'ion-arrow-graph-up-right':transaction.type=='withdrawal_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && transaction.sent),'ion-arrow-graph-down-left':transaction.type=='deposit_bitcoin' || ((transaction.type=='to_card' || transaction.type=='to_email') && !transaction.sent)}"></i>
+                    <h2 class="primary_text" ng-if="transaction.type=='to_card' || transaction.type=='to_email'">
+                                      
+                                      <span ng-if="transaction.sent">Sent to</span>
+                                      <span ng-if="!transaction.sent">Recieved from</span> 
+                                      <span ng-if="transaction.type=='to_card' && transaction.sent"> card </span>
+                                      <span ng-if="transaction.type=='to_email' && transaction.sent"> email </span>
+                                      <span ng-if="transaction.sent" ng-bind="transaction.destination.to"></span>
+                                      <span ng-if="!transaction.sent"> 
+                                        <span ng-bind="transaction.origin.from"></span>
+                                        <span ng-bind="transaction.origin.from"></span>
+                                      </span>
+
+                                    </h2>
+                    <h2 class="primary_text" ng-show="transaction.type=='deposit_bitcoin'">
+                                    <span >Deposit bitcoin to </span> card </span><span ng-bind="transaction.destination.to"></span>
+                                    </h2>
+                    <h2 class="primary_text" ng-show="transaction.type=='withdrawal_bitcoin'">
+                                    <span>Withdraw bitcoin from </span> card </span><span ng-bind="transaction.destination.to"></span>
+                                    </h2>
+                    <p class="secondary_text" ng-if="transaction.sent" class=""> <span ng-bind-html="transaction.origin.symbol | unsafe"></span> <span ng-bind="transaction.origin.amount"></span></p>
+                    <p class="secondary_text" ng-if="!transaction.sent" class=""><span ng-bind-html="transaction.destination.symbol | unsafe"></span> <span ng-bind="transaction.destination.amount"></span></p>
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

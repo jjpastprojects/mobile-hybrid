@@ -1,0 +1,103 @@
+ body {
+            font-family: 'Roboto', Helvetica Neue, Helvetica, sans-serif;
+            font-weight: 200;
+            width: 500px;
+            margin: 50 auto;
+            color: #666;
+        }
+        
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300);
+        h1 {
+            color: #333;
+        }
+        /* BEGIN ON/OFF SWITCH */
+        
+        .onoffswitch {
+            position: relative;
+            width: 100px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            float: right;
+        }
+        
+        .onoffswitch-checkbox {
+            display: none;
+        }
+        
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            height: 50px;
+            padding: 0;
+            line-height: 50px;
+            border: 2px solid #d4d4d4;
+            border-radius: 50px;
+            background-color: #FFFFFF;
+            transition: background-color 0.1s ease-in;
+        }
+        
+        .onoffswitch-label:before {
+            content: "";
+            display: block;
+            width: 50px;
+            margin: 0px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 48px;
+            border: 2px solid #d4d4d4;
+            border-radius: 50px;
+            transition: all 0.1s ease-in 0s;
+        }
+        
+        .onoffswitch-checkbox:checked + .onoffswitch-label {
+            background-color: #6ef1b2;
+        }
+        
+        .onoffswitch-checkbox:checked + .onoffswitch-label,
+        .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+            border-color: #6ef1b2;
+        }
+        
+        .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+            right: 0px;
+        }
+        /* END ON/OFF SWITCH */
+        
+        button {
+            border: 1px dashed #d4d4d4;
+            padding: 15px;
+            background: white;
+            font-size: 30px;
+            color: #666;
+            outline-width: 0;
+            cursor: pointer;
+        }
+        
+        button:focus {
+            color: #6ef1b2;
+        }
+        
+        form {
+            font-size: 28px;
+        }
+        
+        .text {
+            padding: 10px;
+            background: white;
+            font-size: 20px;
+            color: #666;
+            outline-width: 0;
+            font-size: 28px;
+            border: 1px dashed #d4d4d4;
+            display: block;
+        }
+        
+        i {
+            position: relative;
+            left: -50px;
+            top: 40px;
+        }

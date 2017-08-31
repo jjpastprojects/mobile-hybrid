@@ -1,0 +1,27 @@
+<div>
+  <br/>
+  <div class="row">
+    <div class=" col-md-4">
+      <div class="default">
+        <!-- Default panel contents -->
+        <div class="wordo-tab">
+          <ul class="nav nav-tabs">
+            <li role="presentation" ng-class="{active: tabMode('history')}"><a href="" ng-click="chngTabMode('history')">History</a></li>
+            <li role="presentation" ng-class="{active: tabMode('save')}"><a href="" ng-click="chngTabMode('save')">Save</a></li>
+          </ul>
+        </div>
+        <!-- List group -->
+        <a ng-show="tabMode('save') && profile.isLoggedIn" href="" class="list-group-item" ng-repeat="likedWord in likedWords  track by $index" ng-class="{active: $index == selectedI}" ng-click="search($index, 'save')"> {{likedWord.word}}
+
+          <a ng-show="tabMode('history')" href="" class="list-group-item" ng-repeat="historyWord in historyWords  track by $index" ng-class="{active: $index == selectedI}" ng-click="search($index, 'history')"> {{historyWord.word}}
+       
+      </a>
+       <div ng-show="tabMode('save') && !profile.isLoggedIn">
+        {{errorMsg}}</div>
+          
+      </div>
+    </div>
+    <div class="col-md-8" ui-view>
+    </div>
+  </div>
+</div>

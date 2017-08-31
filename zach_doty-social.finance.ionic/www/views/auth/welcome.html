@@ -1,0 +1,52 @@
+<ion-view class="welcome-view" cache-view="false">
+    <ion-content scroll="false">
+        <div class="top-content row">
+            <div class="app-copy col col-center">
+                <img src="img/logo.png">
+            </div>
+        </div>
+        <div class="bottom-content row">
+            <div class="col col-bottom">
+               <!--  <a class="google-sign-in button button-block icon-left ion-social-google" ng-click="googleSignIn()">
+                    <span class="btn-copy">Google</span>
+                </a>
+                <a class="facebook-sign-in button button-block icon-left ion-social-facebook" ng-click="facebookSignIn()">
+                    <span class="btn-copy">Facebook </span>
+                </a> -->
+                <div class="row split-actions">
+                    <div class="col">
+                        <a class="button button-block button-outline" ui-sref="auth.signup"> Sign Up </a>
+                    </div>
+                    <div class="col">
+                        <a class="button button-block button-outline" ui-sref="auth.login">
+              Log In
+            </a>
+                    </div>
+                </div>
+                <div class="other-options-outer row">
+                   
+
+                    <div   class="col col-33" style="padding:0px;">
+                        <a class="twitter-sign-in button button-block icon-center " ng-click="twitterSignIn()" style="font-size:12px !important;">  
+                        <span class="ion-social-google " style="font-size:18px;"></span>
+                        </a>
+                    </div>
+
+                    <div class="col-33" >
+                        <a class="facebook-sign-in button button-block icon-center " ng-click="facebookSignIn()">
+                            <span class="ion-social-facebook " style="font-size:18px;"></span>
+                        </a>
+                    </div>
+
+                    <div class="col-33 ">
+                        <a class="google-sign-in button button-block icon-center " ng-click="googleSignIn()">
+                            <span class="ion-social-twitter" style="font-size:18px;"></span>
+                        </a>
+                </div>
+
+                </div>
+                <section ng-include="'views/partials/legal-notice.html'"></section>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

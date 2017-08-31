@@ -1,0 +1,36 @@
+<ion-view view-title="Convert">
+    <ion-content>
+    	<div class="padding">
+	        <div class="list">
+		        	<div style="margin:20px;" ng-if="btnConvert.errors.length > 0" ng-class="{'error_bg':btnConvert.error==true,'success_bg':btnConvert.error==false}" >
+	                <div ng-repeat="error in btnConvert.errors" ng-class="{'error-text':btnConvert.error==true,'success-text':btnConvert.error==false}" ng-bind="error"></div>
+	            </div>
+
+	            <label class="item item-input item-select">
+	                <div class="input-label">
+	                    <span class="text_blue">From Card</span>
+	                </div>
+	                <select ng-model="convertDetails.fromAddress" ng-change="changeFromCard()">
+	                    <option value="">Select card</option>
+	                    <option value="{{card.address}}" ng-repeat="card in fromCards" ng-bind-html="card.formatted_balance"></option>
+					</select>
+	            </label>
+	            <label class="item item-input item-select">
+	                <div class="input-label">
+	                    <span class="text_blue">To Card</span>
+	                </div>
+	                <select ng-disabled="convertDetails.fromAddress==''" ng-model="convertDetails.toAddress">
+	                    <option value="">Select card</option>
+	                    <option value="{{card.address}}" ng-repeat="card in toCards" ng-bind-html="card.formatted_balance"></option>
+					</select>
+	            </label>
+	            <label class="item item-input">
+				    <span class="input-label" style="width:10%;text-align:right;" ng-bind-html="fromCardSymbol"></span>
+				    <input ng-model="convertDetails.amount" type="text" placeholder="Amount">
+				</label>
+				<button class="button button-block button-positive" ng-click="doConvert()" ng-bind="btnConvert.caption" ng-disabled="btnConvert.proccess">
+	            </button>
+	        </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <i ng-class="likeWordClass" id="menuheart" ng-click="likeWord()"></i>
+  <div class="panel panel-default">
+    <div class="panel-body ">
+      <div ng-repeat="(key, value) in wordDetails " ng-if="value.length " class="part-of-speech-panel ">
+        <div class="part-of-speech-key"> {{key}} </div>
+        <ol>
+          <li class="part-of-speech-desc " ng-repeat="_value in value ">
+            <p ng-bind-html="_value"></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

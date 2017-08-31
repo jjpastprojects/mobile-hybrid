@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Bonus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="Stylesheet" type="text/css" href="css/demo/demo.css" />
+        
+       
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/kickback.js"></script>
+    <script type="text/javascript" src="js/jquery.ios-shake.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.shake.js"></script>
+    <script type="application/javascript">
+        window.addEventListener('load', function () {
+                                FastClick.attach(document.body);
+                                }, false);
+        </script>
+ 
+  </head>
+  <body>
+    <div data-role="page" id="bonus">
+      <div data-role="panel" id="sidebar" data-position="right"> 
+        <h2>Panel Header</h2>
+        <p>You can close the panel by clicking outside the panel, pressing the Esc key or by swiping.</p>
+      </div> 
+
+      <div data-role="header" class="header">
+       
+        <h1 aria-level="1" role="heading" class="header-title ui-title">Bonus</h1>
+        <a class="ui-btn-right ui-link"  href="" id="bonusnextbutton"  data-role="none" >Next</a>
+        
+        
+      </div>
+      <div data-role="header" class="bottom-header">
+        <ul class="list-inline pull-right circl">
+          <li><i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i></li>
+        </ul>
+      </div>
+      <div data-role="main" class="ui-content main-content">
+        <div class="scratch-pic ">
+          
+             <div id="shake" >
+             
+             </div>
+                                  </div>
+        <script type="text/javascript" src="js/wScratchPad.min.js"></script>
+        <script type="text/javascript">
+            $('#demo2').wScratchPad({
+                                    bg: 'images/images/winner.png',
+                                    fg: 'images/scratch.jpg',
+                                    'cursor': 'url("cursors/coin.png") 10 10, default',
+                                    scratchMove: function (e, percent) {
+                                    
+                                    }
+                                    });
+                                    $('#demo2').wScratchPad('reset');
+            </script>
+        
+
+        <style>
+            .scratchpad{
+                width: 35%;
+                height: 100px;
+                border: solid 1px;
+            }
+        
+        @media (max-width: 500px) {
+            .scratchpad {
+                width: 65%;
+            }
+            
+        }
+        </style>
+        <div class="scratch text-center">
+          Scratch to 'win' instant cashback, where every scratcher, is a chance to win.
+        </div>
+      </div>
+      <div class="bonus-btm text-center">
+        <h1>Redeem</h1>
+      </div>
+    </div>
+ 
+ 
+ 
+  </body>
+</html>
+    

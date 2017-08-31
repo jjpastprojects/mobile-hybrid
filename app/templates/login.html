@@ -1,0 +1,81 @@
+<div id="languages">
+ 
+
+	<ul>
+        <!--{{#languages}}    	
+            <li><a href="#" data-langauge-code="{{lng_name_short}}" class="lanaguage_code">{{lng_name}}</a></li>
+        {{/languages}}-->
+    </ul>
+</div>
+<div id="login">
+
+
+ 
+
+    <div id="one_click_login_users_container">
+        
+    </div>
+    <div class="clear"></div>
+    
+    <div id="login_form_container">
+        <form method="post" id="login_form">
+            <table>
+            <tr>
+            <td>
+            
+                <label>
+                    {{lang.LogIn.username}}
+                </label>
+            </td>
+            <td>
+                <div id="textbox">
+                    <input class="login_input" type="text" name="username" id="username" value='' />
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label>
+                    {{lang.LogIn.password}}
+                </label>
+            </td>
+            <td>
+                <div id="textbox">
+                    <input class="login_input" type="password" name="password" id="password" value='' />
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                
+            </td>
+            <td >
+                <table>
+                    <tr>
+                        <td>
+                        <label>
+                             {{lang.LogIn.rememberMe}}&nbsp;
+                        </label>
+                        </td>
+                        <td>
+                        <div class="squaredOne">
+                            <input  type="checkbox" name="remember_me" id="remember_me" />
+                            <label for="remember_me"></label>
+                        </div>
+                        </td>
+                        <td><div id="ios_question_mark_container"></div></td>
+                    </tr>
+                </table>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            </td>
+            <td align="center">
+                <input class="fancy_button" type="submit" value="{{lang.LogIn.login}}">
+            </td>
+            
+            </table>
+        </form>
+    </div>
+</div>    

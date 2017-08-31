@@ -1,0 +1,19 @@
+
+.social-view{
+	.transaction-tabs{
+		background-color: #fff;
+	    border-bottom: 1px solid #6760f6;
+	    position: relative;
+	}
+	.transaction-tabs .tab-item{
+		max-width: 100%;
+		font-size: 12px;
+	}
+	.transaction-tabs .tab-item.active{
+		color: #000;
+	    border-bottom: solid 2px #6760f6 !important;
+	}
+	.transaction-tabs-content .list .item:first-child{
+		border-top: none;
+	}	
+}

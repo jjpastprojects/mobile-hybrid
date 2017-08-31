@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Transaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  </head> 
+  <body>
+    <div data-role="page" id="transactionlist">
+
+      <form id="searchform" data-theme="a">
+        <input data-role="none" class="nightly-input" type="text" name="s" placeholder="Enter your text" />
+        <input data-role="none" class="nightly-button" type="submit" name="submit" value="" />
+      </form>
+
+<div data-role="panel" id="sidebar" data-position="right">
+    <h2 style="margin-left: 10px;">Menu</h2>
+    <ul class="list-unstyled link-sidebar">
+        <li><a href="myaccount.html">My Account</a></li>
+        <li><a href="shopinglist.html">Merchants</a></li>
+        <li><a href="transaction.html">Transactions</a></li>
+        <li><a href="cashout1.html">Cash Out</a></li>
+        <li><a href="cashbackhistory.html">Cashback History</a></li>
+        <!--<li><a href="qrcode.html">Pay now</a></li>-->
+        <li><a id="logout2">Logout</a></li>
+    </ul>
+</div>
+
+      <div data-role="header" class="header">
+        <a class="ui-btn-left ui-link" href="myaccount.html" data-role="none" data-transition="slide"><i class="fa fa-angle-left fa-fw" style="margin-top:5px;"></i></a>
+        <h1 aria-level="1" role="heading" class="header-title ui-title" style="color:#FFFFFF; margin-left: 0px; width: 100%;">Transactions
+          <!--<a href="#" class="serch" data-role="none" id="a-search"><i class="fa fa-search"></i></a>-->
+        </h1>
+        <a class="ui-btn-right ui-link" href="#sidebar" data-role="none"><i class="fa fa-navicon fa-fw" style="margin-top:5px;"></i></a>     
+      </div>
+      <div data-role="header" class="bottom-header radio-qrcode">
+        <div class="pull-left walet">
+          You have <span  id="wlamount"></span> in your wallet
+        </div>
+        <ul class="list-inline pull-right circl" id="radiodrop2">
+          <li><i class="fa fa-circle-o" style="margin-top:18px;"></i> <i class="fa fa-circle-o" style="margin-top:18px;"></i> <i class="fa fa-circle-o" style="margin-top:18px;"></i>
+
+          <div class="radio-drop" style="display: none;">
+              <ul data-role="listview">
+                  
+                  <li><a id="transrecent" href="#">Recent</a></li>
+                  <li><a id="transweek" href="#">Week</a></li>
+                  <li><a id="transall" href="#">All</a></li>
+                  
+              </ul>
+              </div>
+        </li>
+    </ul>
+</div>
+
+      
+           <div data-role="main" class="ui-content main-content shoplist-content">
+        <ul id="translist" class="list-unstyled shoplist">
+                   <div class="clearfix"></div>
+        </ul>
+      </div>
+      <div class="copy-rgt text-center">
+        2015 Copyright &copy; KickBack
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function($) { 
+      $('#a-search').click(function(){
+        $('#searchform').toggle('medium');
+      })
+    });
+  </script>
+</html>
+    

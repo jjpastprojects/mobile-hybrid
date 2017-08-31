@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300);
+        body {
+            margin: 0;
+            font-family: 'Roboto';
+            font-size: 18px;
+            width: 100%;
+        }
+        
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: #fbfbfb;
+            color: #666;
+            line-height: 50px;
+            border-bottom: 1px dashed #d4d4d4;
+            text-align: center;
+        }
+        
+        .menu span {
+            font-weight: 600;
+            text-shadow: 1px 1px white;
+            font-size: 28px;
+            color: black;
+        }
+        
+        i {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        i:hover {
+            opacity: 1;
+        }
+        
+        .number {
+            border-radius: 30%;
+            background-color: #cf2c2c;
+            width: 20px;
+            height: 20px;
+            line-height: 22px;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            box-shadow: 1px 1px 1px white;
+            /* positioning  */
+            position: absolute;
+            top: 5px;
+            right: 120px;
+            z-index: 1;
+        }
+        
+        .definitions {
+            margin-bottom: 50px;
+            width: 500px;
+            margin: 30px auto;
+            margin-bottom: 100px;
+        }
+        
+        .definitions b {
+            font-size: 28px;
+            color: #333;
+        }
+        
+        .definitions ul {
+            list-style: decimal;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .definitions ul li {
+            margin: 10px 0 10px 0;
+        }
+        
+        .other {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .other b {
+            font-size: inherit;
+            color: #999;
+        }
+        
+        .profilepicture {
+            background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hprofile-xfp1/v/t1.0-1/c44.44.552.552/s160x160/227461_414944448559279_1967757541_n.jpg?oh=a716f586b3dc04383f8874f5260e7648&oe=5714E839);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-size: contain;
+            margin: 0 auto;
+        }
+        
+        .profilename {
+            font-size: 34px;
+            text-align: center;
+            margin: 25px;
+            color: #333;
+            font-weight: 900;
+        }
+        
+        .profilesocial {
+            text-align: center;
+        }
+        
+        .profilesocial i {
+            margin: 25 10 0 10;
+            zoom: 1.4;
+        }
+        
+        .notes {
+            background-color: #fbfbfb;
+            padding: 100px 0 100px 0;
+            text-shadow: 1px 1px white;
+        }
+        
+        .notes ul {
+            list-style: none;
+            width: 500px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .notes ul li {
+            padding: 10px 0 10px 0;
+            border-bottom: 1px dashed #d4d4d4;
+        }
+        
+        .notes ul a {
+            color: #666;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .notes ul a:hover {
+            color: black;
+        }
+        
+        .profiletabs {
+            display: inline;
+            position: relative;
+            bottom: 114px;
+            height: 100px;
+            line-height: 100px;
+            border-right: 1px dashed #d4d4d4;
+            padding: 25px;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        .profiletabs:hover {
+            opacity: 1;
+            color: black;
+        }
+        
+        .follow {
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 10px;
+            border: 1px dashed #d4d4d4;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            left: 410px;
+            bottom: 55px;
+            color: #d4d4d4;
+        }
+        
+        .follow:hover {
+            color: #6ef1b2;
+        }
+        
+        .follow:active {
+	        background-color: #6ef1b2;
+	        color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+
+        <span>wordo</span>
+        <i class="fa fa-cog fa-2x" style="position: absolute; right: 50px; line-height: 50px;"></i>
+        <div class="number">3</div>
+
+        <i class="fa fa-globe fa-2x" style="position: absolute; right: 125px; line-height: 50px;"></i>
+
+    </div>
+
+    <input class="search" name="search" type="text" placeholder="Search for definitions" autofocus autocomplete="off" autocapitalize="off" value="@deb" />
+
+    <div class="definitions">
+        <div class="profilepicture"></div>
+        <div class="profilesocial">
+            <i class="fa fa-facebook-official"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-globe"></i>
+        </div>
+        <div class="profilename">Debabrata Triphaty</div>
+        <a href="profilefollowing.html" style="text-decoration: none;"><div class="follow"><span style="color: #6ef1b2;">+ </span>Follow</div></a>
+        <div class="profilebio">My friends call me Deb. I'm a programmer. I enjoy reading books, watching movies, and climbing
+.</div>
+
+    </div>
+
+    <div class="notes">
+        <center>
+            <div class="profiletabs">Likes</div>
+            <div class="profiletabs">Following</div>
+            <div class="profiletabs" style="border-right:0;">Followers</div>
+        </center>
+
+        <ul>
+            <b>15 likes</b>
+            <li>@deb</a> liked the word <a href="#">programming</a></li>
+            <li>@deb</a> liked the word <a href="#">development</a></li>
+            <li>@deb</a> liked the word <a href="#">climbing</a></li>
+            <li>@deb</a> liked the word <a href="#">detour</a></li>
+            <li>@deb</a> liked the word <a href="#">serendipity </a></li>
+            <li>@deb</a> liked the word <a href="#">opine</a></li>
+            <li>@deb</a> liked the word <a href="#">rebel</a></li>
+            <li>@deb</a> liked the word <a href="#">integrity</a></li>
+            <li>@deb</a> liked the word <a href="#">firebase</a></li>
+            <li>@deb</a> liked the word <a href="#">wordie</a></li>
+            <li>@deb</a> liked the word <a href="#">axiom</a></li>
+            <li>@deb</a> liked the word <a href="#">bae</a></li>
+            <li>@deb</a> liked the word <a href="#">technology</a></li>
+            <li>@deb</a> liked the word <a href="#">laptop</a></li>
+            <li>@deb</a> liked the word <a href="#">skydive</a></li>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>

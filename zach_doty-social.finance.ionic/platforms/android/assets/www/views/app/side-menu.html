@@ -1,0 +1,64 @@
+<ion-side-menus enable-menu-with-back-views="true" class="social-finance">
+    <ion-side-menu-content >
+
+        <ion-nav-bar class="app-header bar-stable" align-title="left">
+            <!-- <ion-nav-back-button class="button-clear">
+                <i class="ion-arrow-left-c"></i>
+            </ion-nav-back-button> -->
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        <div class="app-tabs tabs tabs-icon-top" ng-show="$state.is('app.wallet') || $state.is('app.send') || $state.is('app.receive') || $state.is('app.convert')">
+            <a class="tab-item" ui-sref="app.wallet" ng-class="{'active':$state.is('app.wallet')}">
+                <i class="icon ion-ios-home"></i> Home
+            </a>
+            <a class="tab-item" ui-sref="app.send" ng-class="{'active':$state.is('app.send')}">
+                <i class="icon ion-android-send"></i> Send
+            </a>
+            <a class="tab-item" ui-sref="app.receive" ng-class="{'active':$state.is('app.receive')}">
+                <i class="icon ion-arrow-graph-down-right"></i> Receive
+            </a>
+            <a class="tab-item" ui-sref="app.convert" ng-class="{'active':$state.is('app.convert')}">
+                <i class="icon ion-ios-loop-strong"></i> Convert
+            </a>
+        </div>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable app-header height-auto">
+            <div class="user-image-container">
+                <img ng-if="appProfilePicture==''" src="img/default.png">
+                <img ng-if="appProfilePicture!=''" ng-src="{{appProfilePicture}}"/>
+                <br/>
+                <span ng-bind="appUserName"></span>
+            </div>
+        </ion-header-bar>
+        <ion-content class="app-menu-container">
+            <div class="list app-menu">
+                <div class="item item-icon-left" menu-close ui-sref="app.wallet">
+                    <i class="blue-color icon ion-folder"></i> <span class="blue-color">Wallet</span>
+                </div>
+                <div class="item item-icon-left" menu-close ui-sref="app.social">
+                    <i class="blue-color icon ion-arrow-swap"></i> <span class="blue-color">Social</span>
+                </div>
+                <div class="item item-icon-left" menu-close ui-sref="app.local">
+                    <i class="blue-color icon ion-ios-bookmarks"></i> <span class="blue-color">Local</span>
+                </div>
+                <div class="item item-icon-left" menu-close ui-sref="app.contacts">
+                    <i class="blue-color icon ion-calendar"></i> <span class="blue-color">Contacts</span>
+                </div>
+                <div class="item item-icon-left" menu-close ui-sref="app.settings">
+                    <i class="blue-color icon ion-gear-b"></i> <span class="blue-color">Settings</span>
+                </div>
+                <div class="item item-icon-left" menu-close ui-sref="app.help">
+                    <i class="blue-color icon ion-help-circled"></i> <span class="blue-color">Help</span>
+                </div>
+                <div class="item item-icon-left" menu-close ng-click="doLogout()">
+                    <i class="blue-color icon ion-log-out"></i> <span class="blue-color">Logout</span>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

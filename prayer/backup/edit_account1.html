@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Edit Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  </head> 
+  <body>
+    <div data-role="page">
+      <div data-role="panel" id="sidebar" data-position="right"> 
+        <h2>Panel Header</h2>
+        <p>You can close the panel by clicking outside the panel, pressing the Esc key or by swiping.</p>
+      </div> 
+
+      <div data-role="header" class="header">
+        <a class="ui-btn-left ui-link" href="#" data-role="none" data-transition="slide"><i class="fa fa-angle-left fa-fw"></i></a>
+        <h1 aria-level="1" role="heading" class="header-title ui-title">Account</h1>
+        <a class="ui-btn-right ui-link" href="#sidebar" data-role="none"><i class="fa fa-navicon fa-fw"></i></a>     
+      </div>
+      <div data-role="header" class="bottom-header">
+        <ul class="list-inline">
+          <li><a class="ui-link" href="#" data-role="none" data-transition="slide">Edit</a></li>
+          <li><a class="ui-link" href="#" data-role="none" data-transition="slide">Account</a></li>
+        </ul>
+      </div>
+      <div data-role="main" class="ui-content main-content">
+        <div class="profile-pic text-center">
+          <span>
+            <img src="images/profile-pic.png">
+            <a href="#"><i class="fa fa-plus-circle"></i></a>
+          </span>
+        </div>
+        <div class="edit-list">
+          <ul class="list-unstyled">
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <input type="text" name="name1e" id="name12" placeholder="Andy Choo">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-envelope-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <input type="email" name="nameme" id="nameme" placeholder="andy@kickass.ag">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <input type="password" name="namepe" id="namepe" placeholder="Change Password">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <h2></h2>
+                <input type="text" name="namepae" id="namepae" placeholder="Update PayPal">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <input type="text" name="namepne" id="namepne" placeholder="Push Notification">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-toggle-off"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <input type="date" name="namede" id="namede" placeholder="Date Of Birth">
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-calendar"></i></a>
+              </div>
+            </li>
+
+            <li>
+              <div class="col-xs-3">
+                <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i>
+              </div>
+              <div class="col-xs-7">
+                <select name="gen" id="der">
+                  <option value="mon">Gender</option>
+                  <option value="tue">Male</option>
+                  <option value="wed">Female</option>
+                </select>
+              </div>
+              <div class="col-xs-2 text-right">
+                <a href="#" class="ui-link"><i class="fa fa-pencil-square-o"></i></a>
+              </div>
+            </li>
+            <li class="login-form" style="border: medium none;">
+              <div class="form text-center">
+                <input type="submit" data-icon="check" data-inline="true" value="" class="reg-sub">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+    

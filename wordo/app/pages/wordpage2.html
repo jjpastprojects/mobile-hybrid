@@ -1,0 +1,268 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300);
+        body {
+            margin: 0;
+            font-family: 'Roboto';
+            font-size: 18px;
+            width: 100%;
+        }
+                
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: #fbfbfb;
+            color: #666;
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .menu span {
+            font-weight: 600;
+            text-shadow: 1px 1px white;
+            font-size: 28px;
+            color: black;
+            position: relative;
+            left: -150px;
+        }
+        
+        i {
+	        position: relative;
+	        line-height: 50px;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        i:hover {
+            opacity: 1;
+        }
+        
+        .number {
+		    border-radius: 30%;
+		    background-color: #cf2c2c;
+		    width: 20px;
+		    height: 20px;
+		    line-height: 22px;
+		    font-size: 15px;
+		    color: white;
+		    text-align: center;
+		    box-shadow: 1px 1px 1px white;
+		    position: relative;
+		    top: -50px;
+		    left: 170px;
+		    z-index: 1;
+        }
+        
+        .definitions {
+            margin-bottom: 50px;
+            width: 500px;
+            margin: 30px auto;
+            margin-bottom: 100px;
+        }
+        
+        .definitions b {
+            color: #333;
+        }
+        
+        .definitions ul {
+            list-style: decimal;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .definitions ul li {
+            margin: 10px 0 10px 0;
+        }
+        
+        .other {
+	        font-size: 14px;
+	        color: #999;
+        }
+        
+        .other b {
+	        font-size: inherit;
+	        color: #999;
+	        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+
+        <span>wordo</span>        
+
+        <i class="fa fa-cog fa-2x" style="right: -220px;"></i>
+        <i class="fa fa-globe fa-2x" style="right: -120px;"></i>
+        <i class="fa fa-heart fa-2x" style="right: -10px;"></i>
+        <center><div class="number">3</div></center>
+
+    </div>
+
+    <input class="search" name="search" type="text" placeholder="Search for definitions" autofocus autocomplete="off" autocapitalize="off" value="something" />
+
+    <div class="definitions">
+
+        <ul><b>Noun</b>
+
+            <li>An object whose nature is yet to be defined.</li>
+            <li>An object whose name is forgotten by, unknown or unimportant to the user, e.g., from words of a song. Also used to refer to an object earlier indefinitely referred to as 'something' (pronoun sense)</li>
+        </ul>
+
+        <ul><b>Verb</b>
+            <li>Applied to an action whose name is forgotten by, unknown or unimportant to the user, e.g. from words of a song.</li>
+        </ul>
+        <ul><b>Adjective</b>
+	        <li>Having a characteristic that the speaker cannot specify.</li>
+        </ul>
+        
+        <br>
+        <div class="other">
+        <b>Synonyms:</b> object, thing, substance, article<br>
+        <b>Example sentences:</b><br>
+        <em>"I must have forgotten to pack something, but I can't think what."</em><br>
+        <em>"The baby looks something like his father."</em><br>
+        </div>
+
+    </div>
+    <style>
+	    center i:hover {
+		    color: red !important;
+	    }
+	    
+	.heartnumber {
+    position: relative;
+    bottom: 72px;
+    right: 61px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+	}
+    </style>
+    <center><i class="fa fa-heart fa-5x" style="position: relative;
+    bottom: 50px;
+    color: #d4d4d4;"></i><span class="heartnumber">78</span></center>
+
+
+    <style>
+        .notes {
+            background-color: #fbfbfb;
+            padding: 100px 0 100px 0;
+            text-shadow: 1px 1px white;
+        }
+        
+        .notes ul {
+            list-style: none;
+            width: 500px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .notes ul li {
+            padding: 10px 0 10px 0;
+            border-bottom: 1px dashed #d4d4d4;
+        }
+        
+        .notes ul a {
+            color: #666;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .notes ul a:hover {
+            color: black;
+        }
+        
+        .showmorenotes {
+			text-align: center;
+		    height: 50px;
+		    background: white;
+		    width: 280px;
+		    line-height: 50px;
+		    margin: 25px auto;
+		    opacity: 0.8;	    
+		    cursor: pointer;    
+		    border: 1px dashed #d4d4d4;
+        }
+        
+        .showmorenotes:hover {
+	        opacity: 1;
+	        color: black;
+        }
+
+    </style>
+
+    <div class="notes">
+
+        <ul>
+            <b>78 Notes:</b>
+            <li><a href="#">aminozuur</a> liked this word</li>
+            <li><a href="#">melanie</a> liked this word</li>
+            <li><a href="#">wijnandbeijer</a> liked this word</li>
+            <li><a href="#">justrock_89</a> liked this word</li>
+            <li><a href="#">the_duuuude</a> liked this word</li>
+            <li><a href="#">anaskhan</a> liked this word</li>
+            <li><a href="#">farid_el_nasire</a> liked this word</li>
+            <li><a href="#">joostvanitterzon</a> liked this word</li>
+            <li><a href="#">thijs.ouwens</a> liked this word</li>
+            <li><a href="#">donaldjtrump</a> liked this word</li>
+	        <li><a href="#">obama</a> liked this word</li>
+            <li><a href="#">paul.graham</a> liked this word</li>
+            <li><a href="#">seanparker</a> liked this word</li>
+            <li><a href="#">martinshkrelli</a> liked this word</li>
+            <li><a href="#">melthedreamer</a> liked this word</li>
+
+        </ul>
+        
+        <div class="showmorenotes">Show more notes</div>
+    </div>
+
+    <style>
+        footer {
+            position: absolute;
+            bottom: 0px;
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            position: fixed;
+            font-size: 11px;
+            border-top: 1px dashed #d4d4d4;
+            background-color: #fbfbfb;
+            text-shadow: 1px 1px white;
+            text-transform: uppercase;
+            display: none;
+        }
+        
+        footer a {
+            margin-right: 25px;
+            color: #909090;
+            text-decoration: none;
+            float: right;
+            text-shadow: 1px 1px white;
+        }
+        
+        footer a:hover {
+            color: black;
+        }
+    </style>
+
+    <footer>
+        <a href="#" style="float:left; margin-left: 25px;">Powered by Wiktionary</a>
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+        <a href="#">F.A.Q.</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <center>wordo &#169;2015</center>
+    </footer>
+</body>
+
+</html>

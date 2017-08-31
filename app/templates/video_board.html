@@ -1,0 +1,70 @@
+<div id="video_container">
+</div>
+
+<div id="video_player_controls_container">
+</div>
+<div id="video_board" class="display_none">
+	<div id="video_board_inner">
+        <div id="video_middle_column" class="middle_column">
+            <div id="course_logo">
+                <img src="{{course_image}}" alt="course logo">
+            </div>
+            <div id="progress_performance_container">            	
+                {{lang.General.progress_performance}}
+            	<div id="progress_performance_container_inner">
+                </div>
+            </div>
+            <div id="video_board_best_grades_container">            	
+                {{lang.General.quiz_attempts}}
+            	<div id="video_board_best_grades_container_inner">
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+            <div id="description_container">
+            
+            </div>
+            <div id="lesson_list_container">
+                
+            </div>
+            <div class="clear"></div>
+            
+        </div>    
+        <div id="video_right_column" class="right_column">
+        	<div class="right_column_inner">
+                <div id="unit_container">
+                    <div id="video_right_column_header">
+	                    <img class="float_left" src="images/video_board/menu-top_left.png" alt="left_image" />
+        				<div id="units_text">{{lang.General.units}}</div>           
+    	                <img class="float_right" src="images/video_board/menu-top_right.png" alt="right_image" />
+                    </div>
+                    <div class="clear"></div>
+                    {{#units}}
+                        <div class="unit_box" id="unit_{{unt_id}}" data-unit-id = "{{unt_id}}">
+                            {{folder}}
+                        </div>
+                    {{/units}}
+                    
+                    <div class="clear"></div>
+                </div>
+                <div id="video_board_right_column_bottom" class="right_column_bottom">
+                    
+                  <div id="video_right_column_footer" class="display_inline">
+                    </div>
+                    <div >
+                         <div id="view_quiz_button" class="button footer_button ">
+                            <img  class="hover_image" data-inactive-state = "images/classroom/quiz_button_inactive.png" data-active-state="images/classroom/quiz_button_active.png" src="images/classroom/quiz_button_inactive.png" alt="view quiz button" />
+                        </div>
+                        <div class="clear"></div>
+                        <div id="autoguide_button" class="button footer_button float_left">
+                            <img class="hover_image" data-inactive-state = "images/video_board/autoguide_button_inactive.png" data-active-state="images/video_board/autoguide_button_active.png" src="images/video_board/autoguide_button_inactive.png" alt="autoguide button" />
+                        </div>
+                        
+                        <div id="video_board_stop_quiz_button"  class="stop_quiz_button button footer_button float_right">
+                            <img class="hover_image" data-inactive-state = "images/classroom/stop_button_inactive.png" data-active-state="images/classroom/stop_button_active.png" src="images/classroom/stop_button_inactive.png" alt="stop quiz button" />
+                        </div>
+                    </div>
+                </div>                        
+        </div>
+	</div>
+</div>

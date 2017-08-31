@@ -1,0 +1,87 @@
+<div id="user">
+    <div id="update_form">
+    	<div id="first_column">
+            <div id="avatar" class="avatar">
+                <img class="update_avatar"  src="{{user.avatar}}?r={{_random}}" alt="user avatar" />        <br />
+                <a class="update_avatar" href="#">update</a>        
+            </div>
+		</div>
+    	<div id="second_column">
+            <table>
+            	<tr>                    
+                    <td>
+                        <div id='username'>{{user.username}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.UserEditView.firstName}}</label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" id="firstname" value="{{user.usr_firstname}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.UserEditView.lastName}}</label>
+                    </td>
+                    <td>
+                        <input type="text" name="lastname" id="lastname" value="{{user.usr_lastname}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.UserEditView.email}}</label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" id="email" value="{{user.usr_email}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+		<div id="third_column">
+        	 <table>
+             	<tr>
+                    <td>
+                        <input type="button" id="update_user" value="update" />
+                    </td>
+                    <td>
+                        <input type="button" id="change_password" value="change password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.AddDependent.language}}<label>
+                    </td>
+                    <td>
+                        <select name="language" id="language">
+                        	{{#languages}}    	
+					           <option value="{{lng_name_short}}" >{{lng_name}}</option>
+					        {{/languages}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.AddDependent.gender}}<label>
+                    </td>
+                    <td>
+                        <select name="gender" id="gender" data-value="{{user.usr_gender}}">
+                        	<option value=""></option>
+                        	<option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>{{lang.UserEditView.birthday}}<label>
+                    </td>
+                    <td>
+                        <input type="text" name="birthday" id="birthday" value="{{user.usr_birthday}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>            
+    </div>
+</div>    

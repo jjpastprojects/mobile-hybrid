@@ -1,0 +1,10 @@
+<ion-modal-view>
+    <ion-header-bar class="social-finance modal-header">
+        <div class="h1 title">Select Card to Send From</div>
+        
+    </ion-header-bar>
+    <ion-content>
+        <ion-radio ng-click="hideCards()" ng-repeat="card in cards" ng-model="cardSelected.address" ng-value="card.address"><span ng-bind-html="card.formatted_balance"></span></ion-radio>
+
+    </ion-content>
+</ion-modal-view>

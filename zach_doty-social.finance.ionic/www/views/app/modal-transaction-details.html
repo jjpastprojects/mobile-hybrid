@@ -1,0 +1,65 @@
+<ion-modal-view class="modal-dialogs" class="">
+    <ion-header-bar class="social-finance modal-header">
+        <button ng-click="modalTransactionDetails.hide()" class="button button-icon button-clear icon ion-android-arrow-down"></button>
+        <div class="title app-align-left">Transaction Details</div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="padding app-bg-blue app-color-white top-box">
+            <div>
+                <h3 class="app-color-white" style="margin-top:5% !important;">
+                    Amount: 
+                    <span ng-if="transactionViewed.sent"> <span ng-bind-html="transactionViewed.origin.symbol | unsafe"></span> <span ng-bind="transactionViewed.origin.amount"></span></span>
+                    <span ng-if="!transactionViewed.sent"><span ng-bind-html="transactionViewed.destination.symbol | unsafe"></span> <span ng-bind="transactionViewed.destination.amount"></span></span>
+                </h3>
+            </div>
+        </div>
+        <div class="list margin25">
+            
+            <label class="item item-input item-stacked-label" ng-if="transactionViewed.type=='to_card' || transactionViewed.type=='to_email'">
+                <!-- <span class="input-label text_blue" ng-if="transactionViewed.type=='to_email'">Email</span>
+                <span class="input-label text_blue" ng-if="transactionViewed.type=='to_card'">Card</span>
+                <div ng-bind="transactionViewed.destination.to"></div> -->
+                <span class="input-label text_blue" >
+                    <span ng-if="!transactionViewed.sent">From</span> 
+                    <span ng-if="transactionViewed.type=='to_card' && transactionViewed.sent"> Card </span>
+                    <span ng-if="transactionViewed.type=='to_email' && transactionViewed.sent"> Email </span>
+                </span>
+                    <div ng-if="transactionViewed.sent" ng-bind="transactionViewed.destination.to"></div>
+                    <div ng-if="!transactionViewed.sent"> 
+                        <span ng-bind="transactionViewed.origin.from.firstName"></span>
+                        <span ng-bind="transactionViewed.origin.from.lastName"></span>
+                    </div>
+            </label>
+
+            <label class="item item-input item-stacked-label" ng-if="transactionViewed.type=='to_card' || transactionViewed.type=='deposit_bitcoin' || transactionViewed.type=='withdrawal_bitcoin'">
+                <span class="input-label text_blue">Address</span>
+                <div ng-bind="transactionViewed.destination.to"></div>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label text_blue">Date</span>
+                <div ng-bind="transactionViewed.createdAt"></div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label text_blue">Type</span>
+                
+                <div ng-if="transactionViewed.type=='to_card' || transactionViewed.type=='to_email'">
+                    <span ng-if="transactionViewed.sent">Sent to</span>
+                    <span ng-if="!transactionViewed.sent">Recieved from</span> 
+                    <span ng-if="transactionViewed.type=='to_card'"> card </span>
+                    <span ng-if="transactionViewed.type=='to_email'"> email </span>
+                </div>
+                <div ng-if="transactionViewed.type=='deposit_bitcoin'">
+                    <span>Deposit bitcoin</span>
+                </div>
+                <div ng-if="transactionViewed.type=='withdrawal_bitcoin'">
+                    <span>Withdraw bitcoin</span>
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label text_blue">Description</span>
+                <div ng-bind="transactionViewed.message"></div>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

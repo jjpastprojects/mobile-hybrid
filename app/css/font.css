@@ -1,0 +1,14 @@
+/* CSS Document */
+
+
+@font-face {
+font-family: "Comic Sans MS";
+src: url("../fonts/comicbd.ttf") format("opentype");   
+    /* Make sure you defined the correct path, which is related to
+        the location of your file `my_css.css` */ 
+}
+
+.comic_sans_font {
+	
+	font-family:"Comic Sans MS", cursive, sans-serif;
+}

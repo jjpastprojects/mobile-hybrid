@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Shop Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  </head> 
+  <body>
+    <div data-role="page">
+
+      <form id="searchform" data-theme="a">
+        <input data-role="none" class="nightly-input" type="text" name="s" placeholder="Enter your text" />
+        <input data-role="none" class="nightly-button" type="submit" name="submit" value="" />
+      </form>
+
+      <div data-role="panel" id="sidebar" data-position="right"> 
+        <h2>Panel Header</h2>
+        <p>You can close the panel by clicking outside the panel, pressing the Esc key or by swiping.</p>
+      </div> 
+
+      <div data-role="header" class="header">
+        <a class="ui-btn-left ui-link" href="#" data-role="none" data-transition="slide"><i class="fa fa-angle-left fa-fw"></i></a>
+        <h1 aria-level="1" role="heading" class="header-title ui-title">
+          <a href="#" class="serch" data-role="none" id="a-search"><i class="fa fa-search"></i></a>
+        </h1>
+        <a class="ui-btn-right ui-link" href="#sidebar" data-role="none"><i class="fa fa-navicon fa-fw"></i></a>     
+      </div>
+      <div data-role="header" class="bottom-header">
+        <div class="pull-left walet">
+          You have $200.50 in your Wallet
+        </div>
+        <ul class="list-inline pull-right circl">
+          <li><i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i> <i class="fa fa-circle-o"></i></li>
+        </ul>
+      </div>
+      <div data-role="main" class="ui-content main-content shoppro-content">
+        <div class="shop-banner">
+          <div class="pro-like">
+            <i class="fa fa-heart"></i> 200
+          </div>
+          <img class="img-responsive" src="images/shop-profile.jpg">
+        </div>
+        <div class="ui-grid-b burger-bg">
+          <div class="ui-block-a shop-img text-center">
+            <img src="images/burger.png">
+          </div>
+          <div class="ui-block-bc shop-burger">
+            <h2>Burger King</h2>
+            <p>Thomson Rd, 307591</p>
+            <p>Tel: 6511 3700</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="footer" class="shpopro-footer text-center">
+        <div class="ui-grid-a">
+          <div class="ui-block-a pro23">
+            Cashback <span>10%</span>
+          </div>
+          <div class="ui-block-b pro24">
+            Jackpot <span>$1000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+  $(document).ready(function($) { 
+      $('#a-search').click(function(){
+        $('#searchform').toggle('medium');
+      })
+    });
+  </script>
+</html>
+    

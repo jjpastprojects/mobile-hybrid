@@ -1,0 +1,22 @@
+<div  class="chalk_board">
+
+	<div class="chalk_board_inner">
+    	<div class="quiz_single_image">
+			<img class="quiz_image" src="{{image}}" alt="fib_choice_option" />
+    	</div>    
+        <div class="comic_sans_font quiz_answer display_none" id="correct_answer">
+        
+        </div>
+        
+	</div>
+    <div id="quiz_fill_in_the_blank_answer_entry" class="answer_container {{is_sentence}}">
+        <div id="answer_container_inner" class="{{is_sentence}}">
+        <span>{{frag1}}</span><input type="text" id="fill_in_blank_answer_input" class="comic_sans_font quiz_answer {{is_sentence}}" /><span>{{frag2}}</span>
+       </div>
+        
+        <img id="fill_in_blank_answer_submit"  class="answer_button hover_image" data-inactive-state = "images/classroom/Button_question_inactive.png" data-active-state="images/classroom/Button_question_active.png" src="images/classroom/Button_question_inactive.png" alt="answer image" />
+        <div class="clear"></div>
+    </div>
+	
+</div>
+

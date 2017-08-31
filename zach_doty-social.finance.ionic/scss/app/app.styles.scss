@@ -1,0 +1,120 @@
+$app-bg: #6760f6;
+$app-color: white;
+$sideline_color: #b445d0;
+$error-color: #e42112;
+$btn-color: #387ef5;
+
+.social-finance.modal-header{
+		background: $app-bg;
+		color: $app-color;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+.social-finance.modal-header *{
+		color: $app-color;
+}
+.app-bg-blue{
+	background-color: $app-bg !important;
+}
+.top-box{
+	padding:40px 30px;
+}
+.app-color-white{
+	color: white !important;
+}
+.app-align-left{
+	text-align:left !important;
+}
+.blue-bg{
+	background-color: $app-bg !important;
+	box-shadow: none !important;
+}
+.amount-field{
+	width: 10%;
+    text-align: center;
+    float: left;
+    opacity: 1 !important;
+    padding: 0px;
+}
+.amount-textfield{
+	width: 90%;
+    margin-top: 4px;
+}
+.social-finance
+{
+	.align-center {
+		text-align:center;
+	}
+	.send.ion-qr-scanner{
+	    padding: 0px 15px;
+	    background: $btn-color;
+	    right: 0px;
+	    color: $app-color;
+	}
+	.text_blue{
+		color: $app-bg;
+	}
+	.error-text{
+		color: $error-color;
+	}
+	.success-text{
+		color: #4ABE6B;
+	}
+	.bar{
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	}
+	.bar.app-header,.app-tabs{
+		background: $app-bg;
+		color: $app-color;
+	}
+	.bar.app-header *{
+		color: $app-color;
+	}
+
+	.blue-color {
+	    color: $app-bg !important;
+	}
+	.app-menu .item{
+	
+		font-size: 14px;
+		border: none;
+	}
+	.app-menu .item .icon{
+		font-size: 16px;
+	}
+	.app-menu .item-icon-left .icon {
+	    left: 20px;
+	}
+	.height-auto{
+		height: auto !important;
+	}
+	.app-header .user-image-container{
+		display: block;
+		margin: 0 auto;
+	}
+	.app-header .user-image-container img{
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+	}
+	.app-menu-container{
+		top:110px;
+	}
+	.bar.app-header{
+		text-align: center;
+	}
+	.slider-pager{
+		text-align: right;
+	}
+	.slider-pager .slider-pager-page {
+	    color: #FFF !important;
+	}
+	.clear{
+		clear: both;
+	}
+	.right{
+		float: right;
+	}
+	.left{
+		float: left;
+	}
+}
