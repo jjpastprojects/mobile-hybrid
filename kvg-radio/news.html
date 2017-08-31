@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, width=device-width" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>News</title>
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/spin.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+
+<style type="text/css">
+#loading-dialog {
+    display: block;
+    background: rgba(255,255,255,.3);
+    padding: 10px;
+    border-radius: 5px;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 0 0 3px 1px rgba(48,48,48,.6);
+    color: #fff;
+}
+</style>
+
+</head>
+
+<body>
+<div class="col-sm-12 text-center top_custom top_position_fixed">
+	<img src="images/logo.png" />
+</div>
+
+<div class="col-sm-12 text-center content_custom1">
+
+    <div id="loading-dialog">
+    </div>
+
+	<a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+    <a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+    <a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+    <a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+    <a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+    <a href="#">
+    	<div class="row">
+            <div class="col-sm-12 text-left">
+                <p>Why we march in the March for Life.</p>
+            </div>
+            
+            <div class="col-xs-12 text-left">
+            	<p class="custom_row_news">21-Jan-2014</p>
+            </div>
+    	</div>
+    </a>
+</div>
+<div class="col-sm-12 bottom_custom text-center bottomo_position_fixed">
+	<ul>
+    	<li>
+            <a href="index.html" class="bottom_btn">Home
+                <span class="icon_custom">
+                    <img src="images/btn4.png"/>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="streaming.html" class="bottom_btn">Streaming
+                <span class="icon_custom">
+                    <img src="images/btn3.png"/>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="bottom_btn custom_active">News
+                <span class="icon_custom">
+                    <img src="images/btn5-1.png"/>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="community.html" class="bottom_btn">Community
+                <span class="icon_custom">
+                    <img src="images/btn1.png"/>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="archives.html" class="bottom_btn">Archives
+                <span class="icon_custom">
+                    <img src="images/btn2.png"/>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var opts = {
+  lines: 13, // The number of lines to draw
+  length: 20, // The length of each line
+  width: 10, // The line thickness
+  radius: 30, // The radius of the inner circle
+  corners: 1, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: 'auto', // Top position relative to parent in px
+  left: 'auto' // Left position relative to parent in px
+};
+var target = document.getElementById('loading-dialog');
+var spinner = new Spinner(opts).spin(target);
+
+// target.appendChild(spinner.el);
+</script>
+</body>
+</html>

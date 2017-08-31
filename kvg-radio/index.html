@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/streaming.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova_plugins.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.timer.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/spin.min.js"></script>
+<script type="text/javascript" src="js/jquery.spin.js"></script>
+<script type="text/javascript" src="js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    <div class="col-sm-12 text-center top_custom top_position_fixed">
+        <img src="images/logo.png" />
+    </div>
+
+    <button type="button" class="btn btn-success btn-sm back">
+        <span class="glyphicon glyphicon-chevron-left"></span> Back
+    </button>
+
+    <!-- Main Content(s) -->
+
+    <div id="home" class="col-sm-12 text-center content_custom">
+
+        <button id="btn-streaming" type="button" class="btn btn-success btn-lg">Streaming</button>
+        <button id="btn-news" type="button" class="btn btn-success btn-lg">News</button>
+        <button id="btn-community" type="button" class="btn btn-success btn-lg">Community</button>
+        <!-- <button id="btn-archives" type="button" class="btn btn-success">Archives</button> -->
+
+    </div>
+
+    <div id="streaming" class="col-sm-12 text-center content_custom">
+        <div class="row radio_img"><img src="images/radio.png" /></div>
+
+        <div class="container_player gradient">
+
+            <div id="playerbar" class="player gradient">
+                <a class="controlbutton" id="play" title=""><i id="playi" class="fa fa-play"></i></a>
+                <a class="controlbutton" id="mute" title=""><i id="mutei" class="fa fa-volume-up"></i></a>
+                <input type="range" id="seek" value="100" max="100"/>
+                <a class="button gradient" id="close" href="" title=""></a>
+            </div>
+
+            <div class="flags">
+                <div class="on-air">On Air</div>
+                <div class="muted">Muted</div>
+            </div>
+        </div>
+
+        <div id="loading-dialog">
+            <img src="images/loading.gif">
+        </div>
+
+    </div>
+
+    <div id="news" class="col-sm-12 text-center content_custom">
+        <div id="news-list" class="list-group"></div>
+        <div class="news-list-bottom">Loading Content...</div>
+    </div>
+
+    <div id="news-desc" class="col-sm-12 text-left content_custom">
+        <div class="panel panel-success" id="div-news-desc">
+            <div class="panel-heading">
+				<h4 id="news-heading"></h4>
+				<p id="news-date"></p>
+			</div>
+            <div class="panel-body" id="news-detail">
+                
+            </div>
+        </div>
+    </div>
+	<div id="ad-desc" >
+        
+    </div>
+    <div id="community" class="col-sm-12 text-center content_custom">
+        <div id="event-list" class="list-group"></div>
+        <!-- <div class="event-list-bottom">Loading Content...</div> -->
+    </div>
+
+    <div id="event-desc" class="col-sm-12 text-left content_custom">
+        <div class="panel panel-success" id="div-event-desc">
+            <div class="panel-heading">
+				<h4 id="event-heading"></h4>
+				<p id="event-date"><p>
+				<p id="event-enddate"><p>
+				<p id="event-location"><p>
+			</div>
+            <div class="panel-body" id="event-detail">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+	<div id="featured-ads-wrapper" class="col-sm-12 content-custom bottom_custom_ads  bottomo_position_fixed_ads ">
+    	<div id="featured-ads" class="featured_ads">
+			<div id="featured-ads-content" class="text-left featured_ads_content title" > 
+				<a id="featured-link" class="featured_link" data-id="">
+				</a>
+			</div>
+		</div>
+    </div>
+    <div class="col-sm-12 bottom_custom text-center bottomo_position_fixed">
+    	<ul>
+        	<li><a id="b-home" class="bottom_btn">Home
+                    <span class="icon_custom"><img src="images/btn4.png"/></span>
+                </a></li>
+            <li><a id="b-streaming" class="bottom_btn">Streaming
+                    <span class="icon_custom"><img src="images/btn3.png"/></span>
+                </a></li>
+            <li><a id="b-news" class="bottom_btn">News
+                    <span class="icon_custom"><img src="images/btn5.png"/></span>
+                </a></li>
+            <li><a id="b-community" class="bottom_btn">Community
+                    <span class="icon_custom"><img src="images/btn1.png"/></span>
+                </a></li>
+           <!--  <li><a id="b-archives" class="bottom_btn">Archives
+                    <span class="icon_custom"><img src="images/btn2.png"/></span>
+                </a></li> -->
+        </ul>
+    </div>
+
+    <div class="error">
+        <p>Connection Error! Check Connection Settings.</p>
+    </div>
+
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+</html>
