@@ -1,0 +1,120 @@
+<script>
+	if ( typeof ($) == 'undefined')
+		window.location = 'index.html';
+</script>
+<div id="marker" data-role="page" >
+	<div data-role="content">
+		<div class="marker_header title"></div>
+		<div id="webcam-flash"></div>
+		<div id="webcam-preview"></div>
+		<div class="scan-preview" id="scan-preview"></div>
+		<div class="scan-message" id="scan-message"></div>
+		<div class="button confirm-scan-button" id="confirm-scan-button">
+			CAPTURE
+		</div>
+		<div class="button rescan-button" id="rescan-button">
+			REDO CAPTURE
+		</div>
+		<hr/>
+		<div class="label" style="text-align:center;">
+			SCANNED TEXT
+		</div>
+		<input type="text" class="image_preview" placeholder=""/>
+		<hr />
+		<div class='other-options'>
+			<table  style="width:100%;">
+				<tr>
+					<td colspan="2"><div class='other_options_header'></div></td>
+				</tr>
+				<tr>
+					<td style="width:50%;">
+					<div class='data-marker-name'>
+						<input type='text' placeholder='' />
+					</div></td>
+					<td  style="width:50%;">
+					<div class='data-marker-location'>
+						<input type='text' readonly="readonly" />
+					</div></td>
+				</tr>
+				<tr>
+					<td style="width:100%;" colspan="2">
+					<div style='text-align:center;display:none;margin-top:20px;' class="external-buttons">
+						<div class='save-marker-button'></div>
+						<div class='reset-marker-button'></div>
+					</div></td>
+				</tr>
+				<tr>
+					<td>
+					<div class='options-area'>
+						<table  style="width:100%;">
+							<tr>
+								<td style="vertical-align:top;"><div id="structures_instr" class="label"></div>
+								<select id="structures" name="structure" data-type="structure" >
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+								<br/>
+								<div id="levels_instr" class="label"></div>
+								<select id="levels" name="level" data-type="level" >
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select></td>
+							</tr>
+						</table>
+					</div>
+					<div style='text-align:left;' class="internal-buttons">
+						<div class='save-marker-button'></div>
+						<div class='reset-marker-button'></div>
+					</div></td>
+					<td>
+					<div class='direction-pad'>
+						<table style="width:100%;">
+							<tr>
+								<td>NW</td>
+								<td>N</td>
+								<td>NE</td>
+							</tr>
+							<tr>
+								<td>W</td>
+								<td>+</td>
+								<td>E</td>
+							</tr>
+							<tr>
+								<td>SW</td>
+								<td>S</td>
+								<td>SE</td>
+							</tr>
+						</table>
+					</div></td>
+				</tr>
+			</table>
+
+			<br/>
+			<div style='clear:both;'>
+				<br/>
+				<hr />
+				<br/>
+				<div class="marker-que-list"></div>
+			</div>
+		</div>
+		<div class="hidden_controls">
+			<input type="file" id="image_chooser" accept='image/*' />
+		</div>
+	</div>
+</div>

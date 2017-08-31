@@ -1,0 +1,49 @@
+<script>
+	if ( typeof ($) == 'undefined')
+		window.location = 'index.html';
+</script>
+<div id="search_details" data-role="page" >
+    <div data-role="content">
+    	<form id="search_form">
+    		<div class="searchable_choices">
+	    		<div id="searchable_choice_instr" class="label"></div>
+        		<div class='search_choice_box device'></div>
+        		<div class='search_choice_box label'></div>
+        	</div>
+        	<hr />
+        	<br/>
+    		<div class="select_box searchable_devices">
+    			<div id="searchable_devices_instr" class="label"></div>
+        		<select id="searchable_devices" name="device" data-type="devices" >
+        			<option value="-1">loading...</option>
+        		</select>
+			</div>
+			<div class="select_box searchable_labels">
+    			<div id="searchable_labels_instr" class="label"></div>
+       	 		<select id="searchable_labels" name="label" data-type="labels" >
+       	 			<option value="-1">loading...</option>
+       	 		</select>
+       		 </div>
+       		 <br/>
+       		 <div class="select_box searchable_fields">
+    			<div id="searchable_fields_instr" class="label"></div>
+       	 		<select id="searchable_fields" name="field" data-type="fields" >
+       	 			<option value="-1">loading...</option>
+       	 		</select>
+       		 </div>
+       		 <br/>
+       		 <div class="select_box">
+    			<div id="searchable_value_instr" class="label"></div>
+        		<input type="text" id="searchable_value"  name="value" />
+    		</div>
+    		<br/><br/>
+    		<div id="search_button_container">
+    			<a href="#" data-role="button" id="search_button" ></a>
+    			<a href="#" data-role="button" id="reset_search_button" class="second"></a>
+    		</div>
+        </form>
+        <br/>
+        <div id="past_searches_title">Last Search</div>
+        <div id="past_searches"></div>
+    </div>
+</div>

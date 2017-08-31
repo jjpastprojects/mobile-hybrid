@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.rfinspired.goosebumper" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Goose Bumper</name>
+	<description>Goose Bumper | Mobile App | RFInspired</description>
+	<author email="jjohnson.java@gmail.com" href="http://rfinspired.com "></author>
+	<preference name="permissions" value="none" />
+	<preference name="phonegap-version" value="cli-5.2.0" />
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device" value="universal" />
+	<preference name="webviewbounce" value="true" />
+	<preference name="websecurity" value="disable" />
+	<preference name="prerendered-icon" value="true" />
+	<preference name="stay-in-webview" value="false" />
+	<preference name="ios-statusbarstyle" value="default" />
+	<preference name="detect-data-types" value="true" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="show-splash-screen-spinner" value="true" />
+	<preference name="auto-hide-splash-screen" value="true" />
+	<preference name="disable-cursor" value="false" />
+	<preference name="android-minSdkVersion" value="7" />
+	<preference name="android-installLocation" value="auto" />
+	<plugin name="tesseractPlugin" value="com.googlecode.tesseract.android"/>
+	<gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+	<gap:plugin name="org.apache.cordova.camera" source="npm" />
+	<gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+	<gap:plugin name="org.apache.cordova.console" source="npm" />
+	<gap:plugin name="org.apache.cordova.contacts" source="npm"/>
+	<gap:plugin name="org.apache.cordova.device" source="npm"/>
+	<gap:plugin name="org.apache.cordova.device-motion" source="npm"/>
+	<gap:plugin name="org.apache.cordova.device-orientation" source="npm"/>
+	<gap:plugin name="org.apache.cordova.dialogs" source="npm"/>
+	<gap:plugin name="org.apache.cordova.file"  source="npm" />
+	<gap:plugin name="org.apache.cordova.file-transfer" source="npm"/>
+	<gap:plugin name="org.apache.cordova.geolocation" source="npm"/>
+	<gap:plugin name="org.apache.cordova.globalization" source="npm"/>
+	<gap:plugin name="org.apache.cordova.inappbrowser"  source="npm" />
+	<gap:plugin name="org.apache.cordova.media" source="npm" />
+	<gap:plugin name="org.apache.cordova.network-information" source="npm" />
+	<gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
+	<gap:plugin name="org.apache.cordova.vibration" source="npm" />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<gap:plugin name="com.modaltech.cordova.plugin.canvascamera" version="1.0" />
+	<icon src="icon.png" />
+	<gap:splash src="/icons/splash.png" />
+	<access origin="*" />
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+</widget>

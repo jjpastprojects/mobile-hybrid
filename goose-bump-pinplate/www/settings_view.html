@@ -1,0 +1,34 @@
+<script>
+	if ( typeof ($) == 'undefined')
+		window.location = 'index.html';
+</script>
+<div id="settings" data-role="page" >
+    <div data-role="content">
+    	<form id="settings_form">
+	    	<div>
+	    		<div class='label unique-key-label' ></div>
+	    		<div><input type="text" id="unique-key" style="text-transform: uppercase;" /></div>
+	    		<br/>
+	    		<div class='label unique-id-label' >UNIQUE ID</div>
+	    		<div><input type="text" id="unique-id" /></div>
+	    		<br/>
+	    		<div class='label show_extended_label'></div>
+	    		<div>
+	    			<select id="show-extended-ui">
+	    				<option value="1">YES</option>
+	    				<option value="0">NO</option>
+	    			</select>
+	    		</div>
+	    		<br/>
+	    		<div class='label backcode_types_label'>BAR CODE TYPES</div>
+	    		<div class="barcode_types_container"></div>
+	    		<br/>
+	    		<hr/>
+	    		<br/>
+	    		<div>
+	    			<div class="button settings-save-button"></div>
+	    		</div>
+	    	</div>
+    	</form>
+    </div>
+</div>

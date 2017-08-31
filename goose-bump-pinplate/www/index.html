@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>RFInspireD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="apple-touch-icon" href="icon.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="icon.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="icon.png" />
+		<link rel="apple-touch-startup-image" href="splash.png" />
+		<link rel="apple-touch-startup-image" sizes="768x1004" href="splash.png" />
+		<link rel="stylesheet" href="css/smoke.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" charset="utf-8" src="tesseractPlugin.js"></script>
+
+		<script>
+			//	BASE_FULL_URL = "http://rest.rfinspired.com/v1.0/";
+			BASE_FULL_URL = "https://rest.rfinspired.com/v1.0/";
+			BASE_OCR_FULL_URL = "https://ocr.space/api/Parse/Image";
+			BASE_OAUTH2_TOKEN_URL = "https://rest.rfinspired.com/v1.0/oauth/token";
+		</script>
+	</head>
+	<body>
+		<div id="quickMessage"></div>
+		<div data-role="header" id="header" data-tap-toggle="false">
+			<table width="100%">
+				<tr>
+					<td style="text-align:left;"><img src="img/logo.png" style="vertical-align:top; width:35px;" /><span style="color:white; font-size:16px;" class='title'>RFInspireD</span>
+					<div style="color:white;position:absolute;left:40px; bottom:5px;" >
+						<span class="online_indacator"></span>
+					</div></td>
+
+					<td><a href="javascript:void(0);" class="logout_button"  id="logout_button"  ></a><a href="javascript:void(0);" class="home_button"  id="home_button"  ></a><a href="javascript:void(0);" class="settings_button"  id="settings_button"  ></a></td>
+				</tr>
+
+			</table>
+		</div>
+		<div class='page-content-container container-fluid'>
+			<div id="home" data-role="page" >
+				<img src="img/splash.gif" />
+			</div>
+		</div>
+		<div data-tap-toggle="true" id="footer" data-role="footer" >
+			<div id='copywrite'></div>
+		</div>
+		<div id="map_container_outter">
+			<div id="map_container"></div>
+			<br/>
+			<a href="#" data-role="button" id="map_close_button"></a>
+		</div>
+		<!--<script type="text/javascript" src="cordova.js"></script>-->
+		<script type="text/javascript" src="js/labels.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.serialize-object.js"></script>
+		<script type="text/javascript" src="js/jquery.ajax-proxy.js"></script>
+		<script type="text/javascript" src="js/jquery.ajax-oauth2-proxy.js"></script>
+		<script type="text/javascript" src="js/quagga.js"></script>
+		<script type="text/javascript" src="js/ocr.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/jquery.scanner.js" ></script>
+		<script type="text/javascript" src="js/smoke.js" ></script>
+		<script type="text/javascript" src="js/camera.js" ></script>
+		<script type="text/javascript" src="js/loading-overlay.js"></script>
+		<script type="text/javascript" src="js/fileinput.webcam.js"></script>
+		<script type="text/javascript" src="js/html5.webcam.js"></script>
+		<script type="text/javascript" src="js/native.webcam.js"></script>
+		<script type="text/javascript" src="js/canvascamera.webcam.js"></script>
+		<script type="text/javascript" src="js/jquery.template.js"></script>
+		<script type="text/javascript" src="js/base64.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script>
+			if ( typeof console === "undefined") {
+				console = {
+					log : function() {
+					}
+				};
+			}
+
+			$(window).load(function() {
+				$(document).ajaxStart(function() {
+					$('body').loadingOverlay();
+				}).ajaxComplete(function() {
+					$('body').loadingOverlay('remove');
+				});
+				App.init();
+			});
+
+			alert = function(s, callback) {
+				quickMessage(s, "");
+				if (callback) {
+					callback(e);
+				}
+			};
+
+			confirm = function(s, callback) {
+				smoke.confirm(s, function(e) {
+					if (e) {
+						callback();
+					}
+				});
+			};
+		</script>
+	</body>
+</html>

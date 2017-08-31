@@ -1,0 +1,118 @@
+.smoke-base {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.smoke-base.smoke-visible {
+	opacity: 1;
+	visibility: visible;
+	z-index: 2000000 !important;
+}
+
+.smokebg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.smoke-base .dialog {
+	position: absolute;
+	border-radius: 10px;
+}
+
+.dialog-prompt {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.dialog-buttons {
+	margin: 20px 0 5px 0
+}
+
+.smoke {
+	text-align: center;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.dialog-buttons button {
+	display: inline-block;
+	vertical-align: baseline;
+	cursor: pointer;
+	font-style: normal;
+	text-decoration: none;
+	border: 0;
+	outline: 0;
+	margin: 0 5px;
+	-webkit-background-clip: padding-box;
+	line-height: 13px;
+	font-weight: normal;
+	padding: 9px 12px;
+	font-size: 15px;
+}
+
+.dialog-prompt input {
+	margin: 0;
+	border: 0;
+	outline: none;
+	border: 1px solid #aaa;
+	width: 75%;
+	display: inline-block;
+	background-color: transparent;
+	font-size: 16px;
+	padding: 8px;
+}
+
+.smoke-base {
+	background: rgba(0,0,0,.7);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#900000000);
+}
+
+.smoke-base .dialog {
+	top: 25%;
+	width: 80%;
+	left: 50%;
+	margin-left: -40%;
+}
+
+.smoke-base .dialog-inner {
+	padding: 15px;
+	color: #202020;
+}
+
+.smoke {
+	background-color: #e5e5e5;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff);
+	box-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+
+.dialog-buttons button {
+	background: #428bca;
+	background: -moz-linear-gradient(top,  #428bca 0%, #3a76b2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#428bca), color-stop(100%,#3a76b2));
+	background: -webkit-linear-gradient(top,  #428bca 0%,#3a76b2 100%);
+	background: -o-linear-gradient(top,  #428bca 0%,#3a76b2 100%);
+	background: -ms-linear-gradient(top,  #428bca 0%,#3a76b2 100%);
+	background: linear-gradient(to bottom,  #428bca 0%,#3a76b2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#428bca', endColorstr='#3a76b2',GradientType=0 );
+	border-radius: 5px;
+	color: #fff;
+	text-transform: uppercase !important;
+	box-shadow: 0px 0px 5px rgba(0,0,0,.4) !important;
+	text-shadow: 0 0 #000 !important;
+}
+
+button.cancel {
+	background: #555 !important;
+}
+
+.queue {
+	display: none;
+}

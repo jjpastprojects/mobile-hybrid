@@ -1,0 +1,19 @@
+<script>
+	if ( typeof ($) == 'undefined')
+		window.location = 'index.html';
+</script>
+<div id="login" data-role="page" >
+    <div data-role="content">
+    	<img src="img/logo.png" /><br/>
+    	<p id="login_text" class="title">
+    		
+    	</p>
+    	<div id="error_container"></div>
+    	<form id="search_form">
+        	<input type="text" id="username"  name="username"  />
+        	<input type="password" id="password"  name="password" /><br/>
+        	<a href="#" data-role="button" id="login_button" style="width:30%; max-width:150px;"></a>
+        	<a href="#" data-role="button" id="reset_login_button" class="second" style="width:30%; max-width:150px;"></a>
+        </form>
+    </div>
+</div>
